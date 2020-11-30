@@ -15,9 +15,9 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 
 // database connection
-const dbURI = 'mongodb+srv://Huang:password2000@cluster0.otraw.mongodb.net/node-auth';
+const dbURI = 'mongodb+srv://viking:Password2000@medicare.4airm.mongodb.net/node-auth';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
-  .then((result) => app.listen(3000))
+  .then((result) => app.listen(3000), console.log('port is open'))
   .catch((err) => console.log(err));
 
 
