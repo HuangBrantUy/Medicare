@@ -85,3 +85,7 @@ module.exports.logout_get = (req, res) => {
     res.redirect('/');
 }
 
+
+// module.exports.dashboard_get = (req, res) =>{
+//     res.render('dashboard');
+// }
