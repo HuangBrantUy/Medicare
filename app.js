@@ -4,6 +4,7 @@ const authroutes = require('./routes/authroutes');
 const cookieParser = require('cookie-parser');
 const { requireAuth, checkUser } = require('./middleware/authMiddleware');
 const app = express();
+const expressLayouts = require('express-ejs-layouts');
 
 
 // middleware
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // view engine
+app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
 // database connection

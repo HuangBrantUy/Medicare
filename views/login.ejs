@@ -1,55 +1,20 @@
-<%- include('partials/header'); -%>
-
-<form>
-    <h2>Log In</h2>
-    <label for="email">Email</label>
-    <input type="text" name="email" required>
-    <div class="email error"></div>
-    <label for="password">Password</label>
-    <input type="password" name="password" required>
-    <div class="password error"></div>
-    <button>Login</button>
-</form>
-
-
-
-<script>
-    const form = document.querySelector('form');
-    const emailError = document.querySelector('.email.error');
-    const passwordError = document.querySelector('.password.error');
-
-    form.addEventListener('submit', async (e)=>{
-        e.preventDefault();
-
-        //get the values
-        const email = form.email.value;
-        const password = form.password.value;
-
-        //reset values
-
-        emailError.textContent = '';
-        passwordError.textContent = '';
-
-        try {
-            const res = await fetch('/login', {
-                method: 'POST',
-                body: JSON.stringify({ email, password }),
-                headers: {'Content-Type': 'application/JSON'}
-            });
-            const data = await res.json();
-            console.log(data)
-            if (data.errors){
-                emailError.textContent = data.errors.email;
-                passwordError.textContent = data.errors.password
-            } 
-            if(data.user){
-                location.assign('/');
-            }
-        } catch(err) {
-            // console.log(err);
-        }
-        
-    });
-</script>
-
-<%- include('partials/footer'); -%>
+<div class="container d-flex justify-content-center align-items-center">
+    <a href="/"><img id="logo" src="/images/logo.png" alt="" height="48px"></a>
+    <form id="login-form">
+        <div class="form-group" id="login-email">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group" id="login-password">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary" id="login-btn">Log In</button>
+        <div id="signup-btn">
+            <a href="/">Sign Up</a>
+        </div>
+    </form>
+    <div id="forgotpass-btn">
+        <a href="/">Forgot Password</a>
+    </div>
+</div>
