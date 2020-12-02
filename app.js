@@ -27,6 +27,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 app.get('*', checkUser);
 app.get('/', (req, res) => res.render('login'));
 app.get('/signup', (req, res) => res.render('signup'));
+app.get('/test', (req, res) => res.render('test'));
 app.get('/smoothies', requireAuth,(req, res) => res.render('smoothies'));
 app.use(authroutes);
 
