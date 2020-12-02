@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/sb-admin-2.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <%- include('../partials/dashboard-sidebar.ejs') %>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <%- include('../partials/dashboard-nav.ejs') %>
+                <%- body %>
+            </div>
+            <%- include('../partials/dashboard-footer.ejs') %>
+        </div>
+    </div>
+    <%- include('../partials/dashboard-logout-modal.ejs') %>
+
+    <script src="/js/all.js"></script>
+    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js//bootstrap/bootstrap.js"></script>
+    <script src="/js/sb-admin-2.js"></script>
+</body>
+
+</html>

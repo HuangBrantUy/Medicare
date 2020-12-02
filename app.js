@@ -14,6 +14,7 @@ app.use(cookieParser());
 
 // view engine
 app.use(expressLayouts);
+app.set('layout', 'layouts/layout')
 app.set('view engine', 'ejs');
 
 // database connection
@@ -25,9 +26,9 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 
 // routes
 app.get('*', checkUser);
-app.get('/', (req, res) => res.render('login'));
-app.get('/signup', (req, res) => res.render('signup'));
-app.get('/test', (req, res) => res.render('test'));
+app.get('/', (req, res) => res.render('login', { title:'Login on Medicare / Medicare'} ));
+app.get('/signup', (req, res) => res.render('signup', { title:'Signup for Medicare / Medicare'}));
+app.get('/home', (req, res) => res.render('dashboard-home', { layout: 'layouts/dashboard-layout'}));
 app.get('/smoothies', requireAuth,(req, res) => res.render('smoothies'));
 app.use(authroutes);
 

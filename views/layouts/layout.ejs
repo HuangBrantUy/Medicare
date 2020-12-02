@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/css/test.css">
+</head>
+
+<body>
+<%- body %>
+
+<script src="/js/jquery-3.5.1.js"></script>
+<script src="/js/popper.js"></script>
+<script src="/js//bootstrap/bootstrap.js"></script>
+<script src="/js/parsley.js"></script>
+<script>
+        $(function () {
+            var $sections = $('.form-section');
+
+            function navigateTo(index) {
+                // Mark the current section with the class 'current'
+                $sections
+                    .removeClass('current')
+                    .eq(index)
+                    .addClass('current');
+                // Show only the navigation buttons that make sense for the current section:
+                $('.form-navigation .previous').toggle(index > 0);
+                var atTheEnd = index >= $sections.length - 1;
+                $('.form-navigation #next-btn').toggle(!atTheEnd);
+                $('.form-navigation [type=submit]').toggle(atTheEnd);
+            }
+
+            function curIndex() {
+                // Return the current index by looking at which section has the class 'current'
+                return $sections.index($sections.filter('.current'));
+            }
+
+            // Previous button is easy, just go back
+            $('.form-navigation .previous').click(function () {
+                navigateTo(curIndex() - 1);
+            });
+
+            // Next button goes forward iff current block validates
+            $('.form-navigation #next-btn').click(function () {
+                $('#signup-form').parsley().whenValidate({
+                    group: 'block-' + curIndex()
+                }).done(function () {
+                    navigateTo(curIndex() + 1);
+                });
+            });
+
+            // Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.
+            $sections.each(function (index, section) {
+                $(section).find(':input').attr('data-parsley-group', 'block-' + index);
+            });
+            navigateTo(0); // Start at the beginning
+        });
+</script>
+<!-- <script>
+        const form = document.querySelector('form');
+        const emailError = document.querySelector('.email.error');
+        const passwordError = document.querySelector('.password.error');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            //get the values
+            const email = form.email.value;
+            const password = form.password.value;
+
+            //reset values
+
+            emailError.textContent = '';
+            passwordError.textContent = '';
+
+            try {
+                const res = await fetch('/login', {
+                    method: 'POST',
+                    body: JSON.stringify({ email, password }),
+                    headers: { 'Content-Type': 'application/JSON' }
+                });
+                const data = await res.json();
+                console.log(data)
+                if (data.errors) {
+                    emailError.textContent = data.errors.email;
+                    passwordError.textContent = data.errors.password
+                }
+                if (data.user) {
+                    location.assign('/');
+                }
+            } catch (err) {
+                // console.log(err);
+            }
+
+        });
+</script>
+<script>
+    const form = document.querySelector('form');
+    const emailError = document.querySelector('.email.error');
+    const passwordError = document.querySelector('.password.error');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        //get the values
+        const email = form.email.value;
+        const password = form.password.value;
+
+        //reset values
+
+        emailError.textContent = '';
+        passwordError.textContent = '';
+
+        try {
+            const res = await fetch('/signup', {
+                method: 'POST',
+                body: JSON.stringify({ email, password }),
+                headers: { 'Content-Type': 'application/JSON' }
+            });
+            const data = await res.json();
+            console.log(data)
+            if (data.errors) {
+                emailError.textContent = data.errors.email;
+                passwordError.textContent = data.errors.password
+            }
+            if (data.user) {
+                location.assign('/');
+            }
+        } catch (err) {
+
+        }
+
+    });
+</script> -->
+</body>
+
+</html>
