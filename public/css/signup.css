@@ -24,6 +24,13 @@
   color: #000000;
 }
 
+.form-section {
+  display: none;
+}
+.form-section.current {
+  display: inherit;
+}
+
 #signup-fullname {
   margin-bottom: 24px;
 }
@@ -115,6 +122,9 @@
   margin-bottom: 28px;
 }
 
+#account-btn {
+  text-align: center;
+}
 #account-btn p {
   font-style: normal;
   font-weight: 500;
@@ -124,6 +134,102 @@
 }
 
 #account-btn a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #2680c2;
+}
+
+#signup-email {
+  margin-bottom: 24px;
+}
+
+#signup-email label {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #686868;
+}
+
+#signup-email input {
+  border: none;
+  width: 303px;
+  height: 53px;
+  border-radius: 0px;
+  border-bottom: 2px solid #c4c4c4;
+  padding: 12px 8px;
+}
+
+#signup-email input[type="email"] {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+
+#signup-password {
+  margin-bottom: 32px;
+}
+
+#signup-password label {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #686868;
+}
+
+#signup-password input {
+  border: none;
+  width: 303px;
+  height: 53px;
+  border-radius: 0px;
+  border-bottom: 2px solid #c4c4c4;
+  padding: 12px 8px;
+}
+
+#signup-password input[type="password"] {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+
+#confirm-btn {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  background: #2680c2;
+  box-shadow: 0px 8px 16px -8px rgba(3, 83, 136, 0.4);
+  border-radius: 100px;
+  padding: 20px 114px;
+  margin-bottom: 28px;
+}
+
+#terms {
+  text-align: center;
+}
+#terms p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #686868;
+}
+
+#terms a {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
