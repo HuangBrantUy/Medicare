@@ -1,11 +1,11 @@
-/* google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+/* google fonts
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"); */
 
 body {
   margin: 0;
   font-family: Avenir Next;
 }
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -58,13 +58,13 @@ form h2 {
   font-weight: 900;
   margin-bottom: 40px;
 }
-/* input {
+input {
   padding: 10px 12px;
   border-radius: 4px;
   border: 1px solid #ddd;
   font-size: 1em;
   width: 100%;
-} */
+}
 label {
   display: block;
   margin: 20px 0 10px;
@@ -137,4 +137,4 @@ footer {
   text-align: center;
   margin-top: 120px;
   color: #aaa;
-}
+} */
