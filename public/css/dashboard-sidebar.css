@@ -4,28 +4,53 @@
 }
 
 svg.svg-inline--fa.fa-clipboard-list-check.fa-w-12 {
+  margin-left: 1.5rem;
   width: 1.5em !important;
   height: 1.5em !important;
+}
+
+.sidebar.toggled svg.svg-inline--fa.fa-clipboard-list-check.fa-w-12 {
+  margin-left: 0rem;
 }
 
 svg.svg-inline--fa.fa-table.fa-w-16 {
+  margin-left: 1.5rem;
   width: 1.5em !important;
   height: 1.5em !important;
+}
+
+.sidebar.toggled svg.svg-inline--fa.fa-table.fa-w-16 {
+  margin-left: 0rem;
 }
 
 svg.svg-inline--fa.fa-user-friends.fa-w-20 {
+  margin-left: 1.5rem;
   width: 1.5em !important;
   height: 1.5em !important;
+}
+
+.sidebar.toggled svg.svg-inline--fa.fa-user-friends.fa-w-20 {
+  margin-left: 0rem;
 }
 
 svg.svg-inline--fa.fa-ticket.fa-w-18 {
+  margin-left: 1.5rem;
   width: 1.5em !important;
   height: 1.5em !important;
 }
 
+.sidebar.toggled svg.svg-inline--fa.fa-ticket.fa-w-18 {
+  margin-left: 0rem;
+}
+
 svg.svg-inline--fa.fa-receipt.fa-w-14 {
+  margin-left: 1.5rem;
   width: 1.5em !important;
   height: 1.5em !important;
+}
+
+.sidebar.toggled svg.svg-inline--fa.fa-receipt.fa-w-14 {
+  margin-left: 0rem;
 }
 
 .sidebar .nav-item .nav-link {
@@ -33,32 +58,68 @@ svg.svg-inline--fa.fa-receipt.fa-w-14 {
   align-items: center;
   padding: 1rem;
   width: 14rem;
+  /* margin-left: 1.5rem;
+  margin-right: 1.5rem; */
 }
 
 .sidebar .nav-item .nav-link span {
-  margin-left: 0.5rem;
+  margin-left: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .sidebar.toggled .nav-item .nav-link {
-  display: block;
-  text-align: center;
-  padding: 0.75rem 1rem;
+  /* display: block;
+  text-align: center; */
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
   width: 6.5rem;
+  /* margin-left: 0rem;
+  margin-right: 0rem; */
 }
 
 .sidebar.toggled .nav-item .nav-link span {
   margin-left: 0rem;
+  display: none;
 }
 
 @media (max-width: 575.98px) {
   .sidebar .nav-item .nav-link {
-    display: block;
-    text-align: center;
-    padding: 0.75rem 1rem;
+    /* display: block;
+    text-align: center; */
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
     width: 6.5rem;
+    /* margin-left: 0rem;
+    margin-right: 0rem; */
   }
 
   .sidebar .nav-item .nav-link span {
+    margin-left: 0rem;
+    display: none;
+  }
+
+  svg.svg-inline--fa.fa-clipboard-list-check.fa-w-12 {
+    margin-left: 0rem;
+  }
+
+  svg.svg-inline--fa.fa-table.fa-w-16 {
+    margin-left: 0rem;
+  }
+
+  svg.svg-inline--fa.fa-user-friends.fa-w-20 {
+    margin-left: 0rem;
+  }
+
+  svg.svg-inline--fa.fa-ticket.fa-w-18 {
+    margin-left: 0rem;
+  }
+
+  svg.svg-inline--fa.fa-receipt.fa-w-14 {
     margin-left: 0rem;
   }
 }
