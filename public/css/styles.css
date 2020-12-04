@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  font-family: Avenir Next;
+  font-family: Avenir Next !important;
 }
 /* h1,
 h2,

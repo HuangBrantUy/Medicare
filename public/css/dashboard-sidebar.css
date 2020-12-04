@@ -1,0 +1,64 @@
+#accordionSidebar {
+  background-color: #2680c2 !important;
+  background-image: none !important;
+}
+
+svg.svg-inline--fa.fa-clipboard-list-check.fa-w-12 {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+svg.svg-inline--fa.fa-table.fa-w-16 {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+svg.svg-inline--fa.fa-user-friends.fa-w-20 {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+svg.svg-inline--fa.fa-ticket.fa-w-18 {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+svg.svg-inline--fa.fa-receipt.fa-w-14 {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+.sidebar .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width: 14rem;
+}
+
+.sidebar .nav-item .nav-link span {
+  margin-left: 0.5rem;
+}
+
+.sidebar.toggled .nav-item .nav-link {
+  display: block;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  width: 6.5rem;
+}
+
+.sidebar.toggled .nav-item .nav-link span {
+  margin-left: 0rem;
+}
+
+@media (max-width: 575.98px) {
+  .sidebar .nav-item .nav-link {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    width: 6.5rem;
+  }
+
+  .sidebar .nav-item .nav-link span {
+    margin-left: 0rem;
+  }
+}
