@@ -86,6 +86,22 @@ svg.svg-inline--fa.fa-receipt.fa-w-14 {
   display: none;
 }
 
+.sidebar-brand-text {
+  margin-left: 0.5rem;
+}
+
+.sidebar-brand-text img {
+  margin-right: 1.25rem;
+}
+
+.sidebar-brand-icon img {
+  margin-left: 1rem;
+}
+
+.sidebar.toggled .sidebar-brand-icon img {
+  margin-left: 0rem;
+}
+
 @media (max-width: 575.98px) {
   .sidebar .nav-item .nav-link {
     /* display: block;
@@ -120,6 +136,10 @@ svg.svg-inline--fa.fa-receipt.fa-w-14 {
   }
 
   svg.svg-inline--fa.fa-receipt.fa-w-14 {
+    margin-left: 0rem;
+  }
+
+  .sidebar.toggled .sidebar-brand-icon img {
     margin-left: 0rem;
   }
 }
