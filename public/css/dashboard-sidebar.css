@@ -53,6 +53,36 @@ svg.svg-inline--fa.fa-receipt.fa-w-14 {
   margin-left: 0rem;
 }
 
+svg.svg-inline--fa.fa-bell.fa-w-14 {
+  margin-left: 1.5rem;
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+.sidebar.toggled svg.svg-inline--fa.fa-bell.fa-w-14 {
+  margin-left: 0rem;
+}
+
+svg.svg-inline--fa.fa-cog.fa-w-16 {
+  margin-left: 1.5rem;
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+.sidebar.toggled svg.svg-inline--fa.fa-cog.fa-w-16 {
+  margin-left: 0rem;
+}
+
+svg.svg-inline--fa.fa-sign-out.fa-w-16 {
+  margin-left: 1.5rem;
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+.sidebar.toggled svg.svg-inline--fa.fa-sign-out.fa-w-16 {
+  margin-left: 0rem;
+}
+
 .sidebar .nav-item .nav-link {
   display: flex;
   align-items: center;
@@ -102,7 +132,15 @@ svg.svg-inline--fa.fa-receipt.fa-w-14 {
   margin-left: 0rem;
 }
 
-@media (max-width: 575.98px) {
+span.mr-2.d-none.d-lg-inline.text-gray-600.small {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+
+  color: #829ab1 !important;
+}
+@media (max-width: 767.98px) {
   .sidebar .nav-item .nav-link {
     /* display: block;
     text-align: center; */
@@ -139,7 +177,19 @@ svg.svg-inline--fa.fa-receipt.fa-w-14 {
     margin-left: 0rem;
   }
 
-  .sidebar.toggled .sidebar-brand-icon img {
+  svg.svg-inline--fa.fa-bell.fa-w-14 {
+    margin-left: 0rem;
+  }
+
+  svg.svg-inline--fa.fa-cog.fa-w-16 {
+    margin-left: 0rem;
+  }
+
+  svg.svg-inline--fa.fa-sign-out.fa-w-16 {
+    margin-left: 0rem;
+  }
+
+  .sidebar .sidebar-brand-icon img {
     margin-left: 0rem;
   }
 }
