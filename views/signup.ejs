@@ -1,16 +1,21 @@
 <div class="signup-wrapper">
     <div class="container d-flex justify-content-center align-items-center">
         <a href="/"><img id="logo" src="/images/logo2.png" alt="" height="48px"></a>
+
+
         <form id="signup-form">
+
             <div class="heading">
                 <h1>Sign Up</h1>
                 <p>Want to apply as doctor? Join us.</p>
             </div>
+
             <div class="form-section">
                 <div class="form-group" id="signup-fullname">
                     <label for="exampleInputFullName">Full Name</label>
                     <input type="name" class="form-control" id="exampleInputFullName" aria-describedby="nameHelp">
                 </div>
+
                 <div class="form-group" id="signup-number">
                     <label for="exampleInputNumber">Mobile Number</label>
                     <div class="number d-flex">
@@ -19,6 +24,7 @@
                         <input type="text" class="form-control ml-auto" id="exampleInputNumber">
                     </div>
                 </div>
+
                 <div class="form-navigation">
                     <button type="button" id="next-btn" class="btn btn-primary">Next</button>
                 </div>
@@ -30,12 +36,16 @@
             <div class="form-section">
                 <div class="form-group" id="signup-email">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                 </div>
+                <div class="email error"></div>
+
                 <div class="form-group" id="signup-password">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                 </div>
+                <div class="password error"></div>
+                
                 <div class="form-navigation">
                     <button type="submit" class="btn btn-primary" id="confirm-btn">Sign Up</button>
                 </div>
@@ -71,7 +81,7 @@
                 headers: { 'Content-Type': 'application/JSON' }
             });
             const data = await res.json();
-            console.log(data)
+            console.log(data);
             if (data.errors) {
                 emailError.textContent = data.errors.email;
                 passwordError.textContent = data.errors.password

@@ -44,7 +44,7 @@ const createToken = (id) => {
 }
 
 module.exports.signup_get = (req,res)=>{
-    res.render('signup');
+    res.render('signup',{ title:'Signup for Medicare / Medicare'});
 }
 
 module.exports.login_get = (req,res)=>{
