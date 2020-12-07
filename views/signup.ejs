@@ -1,11 +1,14 @@
 <div class="signup-wrapper">
     <div class="container d-flex justify-content-center align-items-center">
         <a href="/"><img id="logo" src="/images/logo2.png" alt="" height="48px"></a>
+
+        <!-- Start of the sign up form -->
         <form id="signup-form">
             <div class="heading">
                 <h1>Sign Up</h1>
                 <p>Want to apply as doctor? Join us.</p>
             </div>
+
             <div class="form-section">
                 <div class="form-group" id="signup-fullname">
                     <label for="exampleInputFullName">Full Name</label>
@@ -28,13 +31,15 @@
             </div>
 
             <div class="form-section">
-                <div class="form-group" id="signup-email">
+                <div class="form-group" id="signup-email" >
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                    <div class="email error"></div>
                 </div>
                 <div class="form-group" id="signup-password">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    <div class="password error"></div>
                 </div>
                 <div class="form-navigation">
                     <button type="submit" class="btn btn-primary" id="confirm-btn">Sign Up</button>
@@ -44,6 +49,7 @@
                 </div>
             </div>
         </form>
+        <!-- End of the signup form -->
     </div>
 </div>
 
