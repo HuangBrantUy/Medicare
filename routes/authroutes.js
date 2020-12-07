@@ -9,7 +9,7 @@ router.post('/login', authController.login_post);
 router.get('/logout', authController.logout_get);
 
 //new routes
-// router.get('/dashboard', authController.dashboard_get);
+router.get('/dashboard', authController.dashboard_get);
 // router.get('/apointments', authController.dashboard_get);
 // router.get('/patients', authController.dashboard_get);
 // router.get('/requests', authController.dashboard_get);

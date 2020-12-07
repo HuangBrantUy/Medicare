@@ -86,6 +86,6 @@ module.exports.logout_get = (req, res) => {
 }
 
 
-// module.exports.dashboard_get = (req, res) =>{
-//     res.render('dashboard');
-// }
+module.exports.dashboard_get = (req, res) =>{
+    res.render('dashboard-layout');
+}
