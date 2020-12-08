@@ -1,6 +1,232 @@
-/* .form-section {
+.nav-item {
+  list-style-type: none;
+}
+
+.nav-item:nth-child(2) {
+  margin: 0 40px;
+}
+
+.nav-item a {
+  text-align: center;
+  color: #2680c2;
+}
+
+.navbar {
+  width: 375px;
+  height: 106px;
+  background: white;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0px 0px 20px rgba(127, 163, 202, 0.2);
+}
+
+.nav-item span {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+svg.svg-inline--fa.fa-home-lg-alt.fa-w-18 {
+  width: 24px;
+  height: 24px;
+}
+
+svg.svg-inline--fa.fa-clipboard-list-check.fa-w-12 {
+  width: 24px;
+  height: 24px;
+}
+
+svg.svg-inline--fa.fa-user-circle.fa-w-16 {
+  width: 24px;
+  height: 24px;
+}
+
+.wrapper {
+  width: 375px;
+}
+
+/*home*/
+.home-wrapper {
+  max-width: 375px;
+  position: absolute;
+  top: 76px;
+  height: auto;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.doctor-view {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.home-wrapper h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 16px;
+  padding: 0 20px;
+}
+
+.doctor-view h6 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #102a43;
+  margin-bottom: 0;
+}
+
+.doctor-view a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #2680c2 !important;
+}
+
+.doctor-set {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: auto;
+  margin-bottom: 28px;
+  padding: 0 20px;
+}
+.doctor-set::-webkit-scrollbar {
   display: none;
 }
-.form-section.current {
-  display: inherit;
-} */
+
+.doctor {
+  margin-right: 20px;
+}
+.picture {
+  width: 200px;
+  height: 120px;
+  border-radius: 10px;
+  background-image: url("/images/doctor.jpg");
+  background-size: 100%;
+  background-position: center center;
+  margin-bottom: 12px;
+}
+
+h6.name {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #102a43;
+}
+
+.rate span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #102a43;
+  margin-left: 4px;
+}
+.rate {
+  margin-right: 6px;
+}
+
+svg.svg-inline--fa.fa-star.fa-w-18 {
+  width: 14px;
+  height: 14px;
+  color: #f7c948 !important;
+}
+.doctor {
+  width: 200px;
+}
+
+.name-rate {
+  margin-bottom: 4px;
+}
+
+h6.specialization {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #627d98;
+  margin-bottom: 8px;
+}
+
+svg.svg-inline--fa.fa-users-medical.fa-w-20 {
+  width: 20px;
+  height: 16px;
+}
+
+.patients span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #102a43;
+  margin-left: 4px;
+}
+
+svg.svg-inline--fa.fa-graduation-cap.fa-w-20 {
+  width: 16px;
+  height: 16px;
+}
+
+.experience span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #102a43;
+  margin-left: 4px;
+}
+
+.experience {
+  margin-right: 6px;
+}
+
+.specialization-set {
+  margin-bottom: 20px;
+}
+.explore-specialization {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #102a43;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+.specialization-set {
+  padding: 0 20px;
+}
+
+.spel-container {
+  width: 157.5px;
+  height: 65px;
+  background: #dceefb;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.spel-container .spel-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #102a43;
+  margin-bottom: 4px;
+}
+
+.spel-container .doc-numbers {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #627d98;
+  display: block;
+}
