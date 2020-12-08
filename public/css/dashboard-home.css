@@ -3,7 +3,7 @@
     margin-right: 100px;
     color: black;
     padding-top: 10px;
-    font-family: "Avenir Next" !important;
+    font-family: "Avenir Next";
 }
 
 .appointments-container {
@@ -16,31 +16,44 @@
     display: inline-block;
     width: 333px;
     border-radius: 10px;
-    border-color: skyblue;
-    padding: 20px;
+    border-color: rgb(132, 197, 244);;
     border-style: solid;
+    border-width: 2px;
+    padding: 20px;
     margin-right: 20px;
 }
 
 .appointment-body {
-    font-style: bold;
+    font-weight: bold;
     margin-top: 20px;
+}
+
+.days {
+    margin-top: -7px;
+    font-size: small;
+    color: gray;
 }
 
 .appointment-footer {
     text-align: center;
-    margin-bottom: -20px;
+    margin-bottom: -21px;
     margin-left: -20px;
     background-color: lightblue;
-    width: 328px;
+    width: 114%;
     height: 50px;
     overflow: hidden;
     padding-top: 13px;
+    color: rgb(38, 128, 194);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-weight: bold;
 }
 
 .status {
     float: right;
     margin-top: -30px;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 #confirmed {
@@ -50,10 +63,25 @@
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 12px;
 }
 
-@font-face {
-    font-family: 'Avenir Next';
-    src: url(.../fonts/avenir_next.ttf) format('truetype');
+#on-call {
+    color: white;
+    background-color: gray;
+    border-radius: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#done {
+    color: green;
+}
+
+#name {
+    font-weight: bold;
+}
+
+#date {
+    margin-bottom: -2px;
 }
