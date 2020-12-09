@@ -26,8 +26,13 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 
 // routes
 app.get('*', checkUser);
+
+// patient routes
 app.get('/home', requireAuth, (req, res) => res.render ('patient-home',  {layout: 'layouts/patient-layout'}));
 app.get('/view-all-doctors', requireAuth, (req, res) => res.render ('patient-all-doctors',  {layout: 'layouts/patient-layout'}));
+app.get('/view-doctor', requireAuth, (req, res) => res.render ('view-doctor',  {layout: 'layouts/patient-layout'}));
+
+// doctor routes
 app.get('/', requireAuth, (req,res)=> res.render('dashboard-home', { layout: 'layouts/dashboard-layout'}));
 // app.get('/home', requireAuth, (req, res) => res.render('dashboard-home', { layout: 'layouts/dashboard-layout'}));
 // app.get('/smoothies', requireAuth,(req, res) => res.render('smoothies'));
