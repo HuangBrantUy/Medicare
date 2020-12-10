@@ -59,14 +59,50 @@
     </div>
     <h5>Pending Requests</h5>
     <div class="pending-requests">
-        <div class="requests-header">
-            PATIENT
-            BOOKING DATE
-            REMAINING DAYS
-            STATUS
-        </div>
-        <div class="requests">
-
-        </div>
+        <table class="requests">
+            <tr class="requests-header">
+                <th id="patient">PATIENT</th>
+                <th id="booking-date">BOOKING DATE</th>
+                <th id="remaining-days">REMAINING DAYS</th>
+                <th id="status">STATUS</th>
+                <th id="decision"></th>
+            </tr>
+            <tr>
+                <td >
+                    <div class="picture">
+                        <img class="img-patient" src="images/undraw_profile_1.svg">
+                    </div>
+                    <div class="patient-name">
+                        Bruce Alturas
+                        <p id="patient-id">00001</p>
+                    </div>
+                </td>
+                <td class="booking-date">Nov. 29, 2020 <p>9:00 AM</p></td>
+                <td class="remaining-days">6 days left</td>
+                <td class="table-status"><div class="requests-status">pending</div></td>
+                <td class="decision"><div class="choice">
+                        <div class="decline">Decline</div>
+                        <div class="accept">Accept</div>
+                </div></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="picture">
+                        <img class="img-patient" src="images/undraw_profile_1.svg">
+                    </div>
+                    <div class="patient-name">
+                        JB Magsipoc
+                        <p id="patient-id">00002</p>
+                    </div>
+                </td>
+                <td class="booking-date">Dec. 5, 2020 <p>10:00 AM</p></td>
+                <td class="remaining-days">12 days left</td>
+                <td class="table-status"><div class="requests-status">pending</div></td>
+                <td class="decision"><div class="choice">
+                        <div class="decline">Decline</div>
+                        <div class="accept">Accept</div>
+                </div></td>
+            </tr>
+        </table>
     </div>
 </div>

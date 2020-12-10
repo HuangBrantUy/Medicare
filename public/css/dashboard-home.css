@@ -1,3 +1,18 @@
+table {
+    border-collapse: collapse;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 0 0 0 2px rgb(132, 197, 244); /* this draws the table border  */
+    font-size: 15px;
+    table-layout: fixed;
+}
+
+tr {
+    width: 25%;
+}
+
 .main {
     margin: 30px;
     margin-right: 100px;
@@ -16,7 +31,7 @@
     display: inline-block;
     width: 333px;
     border-radius: 10px;
-    border-color: rgb(132, 197, 244);;
+    border-color: rgb(132, 197, 244);
     border-style: solid;
     border-width: 2px;
     padding: 20px;
@@ -56,6 +71,82 @@
     font-size: 12px;
 }
 
+.pending-requests {
+    
+    width: 1050px;
+}
+
+.requests {
+    width: 1048px;
+}
+
+.picture {
+    display: inline-flex;
+    padding-top: 10px;
+}
+
+.patient-name {
+    display: inline-block;
+    height: 50px;
+}
+
+.img-patient {
+    width: 50px;
+}
+
+.requests-header {
+    background-color:lightblue;
+    text-align: center;
+    font-size: small;
+    height: 60px;
+}
+
+.booking-date {
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 23px;
+}
+
+.remaining-days {
+    text-align: right;
+    padding-right: 43px;
+}
+
+.table-status {
+    text-align: center;
+}
+
+.decision {
+    text-align: center;
+}
+
+.accept {
+    display: inline;
+    border-radius: 5px;
+    background-color: rgb(38, 128, 194);
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    color: white;
+    font-weight: 500;
+}
+
+.decline {
+    display: inline;
+    margin-right: 50px;
+    color: red;
+    font-weight: 500;
+}
+
+.requests-status {
+    background-color: rgb(252, 239, 199);
+    color: rgb(201, 154, 46);
+    font-weight: 500;
+    border-radius: 20px;
+    width: 100px;
+    margin: auto;
+}
+
 #confirmed {
     background-color: lightgreen;
     color: green;
@@ -84,4 +175,24 @@
 
 #date {
     margin-bottom: -2px;
+}
+
+#patient {
+    width: 230px;
+}
+
+#booking-date {
+    width: 150px;
+}
+
+#remaining-days {
+    width: 200px;
+}
+
+#status {
+    width: 150px;
+}
+
+#patient-id {
+    color: gray;
 }
