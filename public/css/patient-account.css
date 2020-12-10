@@ -1,0 +1,79 @@
+.account-topbar {
+  width: 375px;
+  height: 156px;
+  background-color: white;
+  margin-bottom: 16px;
+}
+
+.account-bar {
+  width: 375px;
+  top: 76px;
+  position: absolute;
+}
+
+.account-pic {
+  margin-left: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  background-image: url("/images/undraw_profile_1.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.view-profile {
+  margin-top: 8px;
+  margin-left: 16px;
+}
+
+.account-name {
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  color: #102a43;
+}
+
+.profile-link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #2680c2;
+}
+
+.account-nav .nav-item {
+  margin: 0;
+  padding: 12px 20px;
+  text-align: none;
+}
+
+.account-nav .nav-item a {
+  padding: 0;
+  text-align: inherit !important;
+}
+
+.account-nav .nav-item span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #102a43;
+}
+.account-nav .nav-item:nth-child(4) span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #a61b1b;
+}
