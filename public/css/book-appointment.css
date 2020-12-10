@@ -1,0 +1,87 @@
+/* .book-appointment-box {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(127, 163, 202, 0.2);
+  width: 375px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: absolute;
+  top: 56px;
+  height: auto;
+  overflow-y: auto;
+  padding: 32px 20px;
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+} */
+
+/* .modal.fade .modal-dialog {
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+}
+
+.modal.in .modal-dialog {
+  transform: translateY(0px);
+} */
+
+.modal-dialog {
+  margin: 0;
+  top: 56px;
+}
+
+.modal-content {
+  border: none;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.modal-header {
+  padding-top: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  border: none;
+}
+
+.title-appointment {
+  margin-left: 73px;
+  margin-right: 95px;
+  width: 141px;
+  height: 22px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+  display: block;
+}
+
+.bar-container .close {
+  display: contents;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  border: none;
+  border-radius: 0;
+  padding: 32px 20px;
+}
+
+#book-now-btn {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px 128.68px;
+  background: #2680c2;
+  box-shadow: 0px 8px 16px -8px rgba(3, 83, 136, 0.4);
+  border-radius: 100px;
+  border: none;
+  margin: 0;
+}
