@@ -31,6 +31,7 @@ app.get('*', checkUser);
 app.get('/home', requireAuth, (req, res) => res.render ('patient-home',  {layout: 'layouts/patient-layout'}));
 app.get('/view-all-doctors', requireAuth, (req, res) => res.render ('patient-all-doctors',  {layout: 'layouts/patient-layout'}));
 app.get('/view-doctor', requireAuth, (req, res) => res.render ('view-doctor',  {layout: 'layouts/patient-layout'}));
+app.get('/patient-activity', requireAuth, (req, res) => res.render ('patient-activity',  {layout: 'layouts/patient-layout'}));
 
 // doctor routes
 app.get('/', requireAuth, (req,res)=> res.render('dashboard-home', { layout: 'layouts/dashboard-layout'}));

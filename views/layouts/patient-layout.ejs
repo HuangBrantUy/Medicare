@@ -11,16 +11,29 @@
     <link rel="stylesheet" href="/css/patient-navbar.css">
     <link rel="stylesheet" href="/css/patient-all-doctors.css">
     <link rel="stylesheet" href="/css/doctor.css">
+    <link rel="stylesheet" href="/css/book-appointment.css">
+    <link rel="stylesheet" href="/css/patient-activity.css">
 </head>
 <body>
     <div class="d-flex justify-content-center align-content-center">
     <div class="patient-wrapper">
         <%- body %>
+        <%- include('../partials/book-appointment.ejs') %>
     </div>
     </div>
+
 <script src="/js/all.js"></script>
 <script src="/js/jquery-3.5.1.js"></script>
 <script src="/js/popper.js"></script>
-<script src="/js//bootstrap/bootstrap.js"></script>
+<script src="/js/bootstrap/bootstrap.js"></script>
+<script>
+            // $('#book-appointment').on('show.bs.modal', function (event) {
+            //     var modal = $('.modal').attr('class', 'modal animate__animated animate__fadeInUpBig');
+            // })
+
+            // $('#book-appointment').on('hide.bs.modal', function (event) {
+            //     var modal = $('.modal').attr('class', 'modal animate__animated animate__flipOutX');
+            // })
+</script>
 </body>
 </html>

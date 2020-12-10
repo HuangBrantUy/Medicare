@@ -5,6 +5,8 @@
 .topbar-doctor {
   width: 375px;
   height: 100px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .bar-doctor {
@@ -150,15 +152,16 @@
   color: #102a43;
 }
 
-.book-appointment-btn a {
+#book-appointment-btn {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
   color: #ffffff;
-  padding: 18px 96.1px;
+  padding: 20px 96.96px;
   background: #2680c2;
   box-shadow: 0px 8px 16px -8px rgba(3, 83, 136, 0.4);
   border-radius: 100px;
+  border: none;
 }
