@@ -1,0 +1,75 @@
+<div class="main">
+    <div class="appointments-main-header">
+    <h3>All Appointments</h3>
+        <div class="search">
+            <span class="material-icons">search</span>
+            <input type="text" class="search-input" placeholder="Search">
+        </div>
+    </div>
+    <br><br>
+    <div class="pending-requests">
+        <table class="requests">
+            <tr class="requests-header">
+                <th id="patient">PATIENT</th>
+                <th id="booking-date">BOOKING DATE</th>
+                <th id="remaining-days">REMAINING DAYS</th>
+                <th id="status">STATUS</th>
+                <th id="decision"></th>
+            </tr>
+            <tr>
+                <td >
+                    <div class="picture">
+                        <img class="img-patient" src="images/undraw_profile_1.svg">
+                    </div>
+                    <div class="patient-name">
+                        Brant Uy
+                        <p id="patient-id">00003</p>
+                    </div>
+                </td>
+                <td class="booking-date">Nov. 27, 2020 <p>10:30 AM</p></td>
+                <td class="remaining-days">6 days left</td>
+                <td class="table-status"><div id="confirmed" class="appointments-status">confirmed</div></td>
+                <td class="decision"><div class="choice">
+                        <div class="decline">Cancel</div>
+                        <div class="accept">Call</div>
+                </div></td>
+            </tr>
+            <tr class="colored">
+                <td>
+                    <div class="picture">
+                        <img class="img-patient" src="images/undraw_profile_1.svg">
+                    </div>
+                    <div class="patient-name">
+                        Victor Aguhob
+                        <p id="patient-id">00004</p>
+                    </div>
+                </td>
+                <td class="booking-date">Nov. 24, 2020 <p>8:00 AM</p></td>
+                <td class="remaining-days">Today</td>
+                <td class="table-status"><div id="on-call" class="appointments-status">on-call</div></td>
+                <td class="decision"><div class="choice">
+                        <div class="decline" style="color: gray;">Cancel</div>
+                        <div class="accept">Call</div>
+                </div></td>
+            </tr>
+            <tr>
+                <td >
+                    <div class="picture">
+                        <img class="img-patient" src="images/undraw_profile_1.svg">
+                    </div>
+                    <div class="patient-name">
+                        Ean Velayo
+                        <p id="patient-id">00005</p>
+                    </div>
+                </td>
+                <td class="booking-date">Nov. 19, 2020 <p>1:00 PM</p></td>
+                <td class="remaining-days">5 days ago</td>
+                <td class="table-status"><div id="done" class="appointments-status">done</div></td>
+                <td class="decision"><div class="choice">
+                        <div class="decline" style="color: gray;">Cancel</div>
+                        <div class="accept">Call</div>
+                </div></td>
+            </tr>
+        </table>
+    </div>
+</div>

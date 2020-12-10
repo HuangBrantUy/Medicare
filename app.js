@@ -35,6 +35,8 @@ app.get('/patient-activity', requireAuth, (req, res) => res.render ('patient-act
 
 // doctor routes
 app.get('/', requireAuth, (req,res)=> res.render('dashboard-home', { layout: 'layouts/dashboard-layout'}));
+app.get('/appointments', requireAuth, (req,res)=> res.render('appointments', { layout: 'layouts/dashboard-layout'}));
+app.get('/patients', requireAuth, (req,res)=> res.render('patients', { layout: 'layouts/dashboard-layout'}));
 // app.get('/home', requireAuth, (req, res) => res.render('dashboard-home', { layout: 'layouts/dashboard-layout'}));
 // app.get('/smoothies', requireAuth,(req, res) => res.render('smoothies'));
 app.use(authroutes);
