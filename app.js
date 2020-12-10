@@ -33,11 +33,14 @@ app.get('/view-all-doctors', requireAuth, (req, res) => res.render ('patient-pag
 app.get('/view-doctor', requireAuth, (req, res) => res.render ('patient-pages/view-doctor',  {layout: 'layouts/patient-layout'}));
 app.get('/patient-activity', requireAuth, (req, res) => res.render ('patient-pages/patient-activity',  {layout: 'layouts/patient-layout'}));
 app.get('/patient-account', requireAuth, (req, res) => res.render ('patient-pages/patient-account',  {layout: 'layouts/patient-layout'}));
+app.get('/patient-login', requireAuth, (req, res) => res.render ('patient-pages/patient-login',  {layout: 'layouts/patient-layout'}));
+app.get('/patient-signup', requireAuth, (req, res) => res.render ('patient-pages/patient-signup',  {layout: 'layouts/patient-layout'}));
 
 // doctor routes
 app.get('/', requireAuth, (req,res)=> res.render('doctor-pages/dashboard-home', { layout: 'layouts/dashboard-layout'}));
 app.get('/appointments', requireAuth, (req,res)=> res.render('doctor-pages/appointments', { layout: 'layouts/dashboard-layout'}));
 app.get('/patients', requireAuth, (req,res)=> res.render('doctor-pages/patients', { layout: 'layouts/dashboard-layout'}));
+
 // app.get('/home', requireAuth, (req, res) => res.render('dashboard-home', { layout: 'layouts/dashboard-layout'}));
 // app.get('/smoothies', requireAuth,(req, res) => res.render('smoothies'));
 app.use(authroutes);

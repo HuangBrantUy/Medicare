@@ -22,12 +22,12 @@
   transform: translateY(0px);
 } */
 
-.modal-dialog {
+#book-appointment .modal-dialog {
   margin: 0;
   top: 56px;
 }
 
-.modal-content {
+#book-appointment .modal-content {
   border: none;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
@@ -35,7 +35,7 @@
   border-bottom-left-radius: 0px;
 }
 
-.modal-header {
+#book-appointment .modal-header {
   padding-top: 24px;
   padding-left: 20px;
   padding-right: 20px;
@@ -43,7 +43,7 @@
   border: none;
 }
 
-.title-appointment {
+#book-appointment .title-appointment {
   margin-left: 73px;
   margin-right: 95px;
   width: 141px;
@@ -61,11 +61,11 @@
   display: contents;
 }
 
-.modal-body {
+#book-appointment .modal-body {
   padding: 20px;
 }
 
-.modal-footer {
+#book-appointment .modal-footer {
   border: none;
   border-radius: 0;
   padding: 32px 20px;

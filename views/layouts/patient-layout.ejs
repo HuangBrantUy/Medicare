@@ -11,15 +11,19 @@
     <link rel="stylesheet" href="/css/patient-css/patient-navbar.css">
     <link rel="stylesheet" href="/css/patient-css/patient-all-doctors.css">
     <link rel="stylesheet" href="/css/patient-css/doctor.css">
-    <link rel="stylesheet" href="/css/patient-css/book-appointment.css">
+    <link rel="stylesheet" href="/css/patient-css/book-appointment-modal.css">
     <link rel="stylesheet" href="/css/patient-css/patient-activity.css">
     <link rel="stylesheet" href="/css/patient-css/patient-account.css">
+    <link rel="stylesheet" href="/css/patient-css/patient-logout-modal.css">
+    <link rel="stylesheet" href="/css/patient-css/patient-login.css">
+    <link rel="stylesheet" href="/css/patient-css/patient-signup.css">
 </head>
 <body>
     <div class="d-flex justify-content-center align-content-center">
     <div class="patient-wrapper">
         <%- body %>
-        <%- include('../partials/book-appointment.ejs') %>
+        <%- include('../partials/book-appointment-modal.ejs') %>
+        <%- include('../partials/patient-logout-modal.ejs') %>
     </div>
     </div>
 
