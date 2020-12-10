@@ -28,16 +28,16 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 app.get('*', checkUser);
 
 // patient routes
-app.get('/home', requireAuth, (req, res) => res.render ('patient-home',  {layout: 'layouts/patient-layout'}));
-app.get('/view-all-doctors', requireAuth, (req, res) => res.render ('patient-all-doctors',  {layout: 'layouts/patient-layout'}));
-app.get('/view-doctor', requireAuth, (req, res) => res.render ('view-doctor',  {layout: 'layouts/patient-layout'}));
-app.get('/patient-activity', requireAuth, (req, res) => res.render ('patient-activity',  {layout: 'layouts/patient-layout'}));
-app.get('/patient-account', requireAuth, (req, res) => res.render ('patient-account',  {layout: 'layouts/patient-layout'}));
+app.get('/home', requireAuth, (req, res) => res.render ('patient-pages/patient-home',  {layout: 'layouts/patient-layout'}));
+app.get('/view-all-doctors', requireAuth, (req, res) => res.render ('patient-pages/patient-all-doctors',  {layout: 'layouts/patient-layout'}));
+app.get('/view-doctor', requireAuth, (req, res) => res.render ('patient-pages/view-doctor',  {layout: 'layouts/patient-layout'}));
+app.get('/patient-activity', requireAuth, (req, res) => res.render ('patient-pages/patient-activity',  {layout: 'layouts/patient-layout'}));
+app.get('/patient-account', requireAuth, (req, res) => res.render ('patient-pages/patient-account',  {layout: 'layouts/patient-layout'}));
 
 // doctor routes
-app.get('/', requireAuth, (req,res)=> res.render('dashboard-home', { layout: 'layouts/dashboard-layout'}));
-app.get('/appointments', requireAuth, (req,res)=> res.render('appointments', { layout: 'layouts/dashboard-layout'}));
-app.get('/patients', requireAuth, (req,res)=> res.render('patients', { layout: 'layouts/dashboard-layout'}));
+app.get('/', requireAuth, (req,res)=> res.render('doctor-pages/dashboard-home', { layout: 'layouts/dashboard-layout'}));
+app.get('/appointments', requireAuth, (req,res)=> res.render('doctor-pages/appointments', { layout: 'layouts/dashboard-layout'}));
+app.get('/patients', requireAuth, (req,res)=> res.render('doctor-pages/patients', { layout: 'layouts/dashboard-layout'}));
 // app.get('/home', requireAuth, (req, res) => res.render('dashboard-home', { layout: 'layouts/dashboard-layout'}));
 // app.get('/smoothies', requireAuth,(req, res) => res.render('smoothies'));
 app.use(authroutes);
