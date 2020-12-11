@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/patient-css/patient-home.css">
     <link rel="stylesheet" href="/css/patient-css/patient-navbar.css">
     <link rel="stylesheet" href="/css/patient-css/patient-all-doctors.css">
@@ -17,21 +19,38 @@
     <link rel="stylesheet" href="/css/patient-css/patient-logout-modal.css">
     <link rel="stylesheet" href="/css/patient-css/patient-login.css">
     <link rel="stylesheet" href="/css/patient-css/patient-signup.css">
+
 </head>
+
 <body>
     <div class="d-flex justify-content-center align-content-center">
-    <div class="patient-wrapper">
-        <%- body %>
-        <%- include('../partials/book-appointment-modal.ejs') %>
-        <%- include('../partials/patient-logout-modal.ejs') %>
-    </div>
+        <div class="patient-wrapper">
+            <%- body %>
+            <%- include('../partials/book-appointment-modal.ejs') %>
+            <%- include('../partials/patient-logout-modal.ejs') %>
+        </div>
     </div>
 
-<script src="/js/all.js"></script>
-<script src="/js/jquery-3.5.1.js"></script>
-<script src="/js/popper.js"></script>
-<script src="/js/bootstrap/bootstrap.js"></script>
-<script>
+    <script src="/js/all.js"></script>
+    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap/bootstrap.js"></script>
+    <script>
+        $('#book-appointment-btn').on('click', function () {
+            $("#book-appointment").removeClass("animated slideOutDown").addClass("animated slideInUp");
+        });
+
+        $('.close').on('click', function () {
+            $("#book-appointment").removeClass("animated slideInUp").addClass("animated slideOutDown");
+            $('.modal-backdrop').remove();
+            // console.log("hello");
+        });
+
+    // $('.close-icon').on('click', function () {
+    //     $("#book-appointment").removeClass("animate__slideInUp").addClass("animate__slideOutDown");
+    // });
+    </script>
+    <script>
             // $('#book-appointment').on('show.bs.modal', function (event) {
             //     var modal = $('.modal').attr('class', 'modal animate__animated animate__fadeInUpBig');
             // })
@@ -39,6 +58,7 @@
             // $('#book-appointment').on('hide.bs.modal', function (event) {
             //     var modal = $('.modal').attr('class', 'modal animate__animated animate__flipOutX');
             // })
-</script>
+    </script>
 </body>
+
 </html>

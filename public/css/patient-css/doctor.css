@@ -39,9 +39,9 @@
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   position: absolute;
-  top: 406px;
-  height: auto;
-  overflow-y: auto;
+  top: 311px;
+  height: 501px;
+  /* overflow-y: auto; */
   padding: 32px 20px;
 }
 

@@ -1,3 +1,7 @@
+#patient-logout {
+  background: rgba(38, 128, 194, 0.9);
+}
+
 #patient-logout .modal-content {
   border-radius: 10px;
 }
