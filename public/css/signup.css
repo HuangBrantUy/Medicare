@@ -236,3 +236,7 @@
   line-height: 16px;
   color: #2680c2;
 }
+
+.error{
+  color: crimson;
+}
