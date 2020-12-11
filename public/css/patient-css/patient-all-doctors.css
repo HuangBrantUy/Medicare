@@ -1,0 +1,131 @@
+.view-doctors {
+  max-width: 375px;
+  position: absolute;
+  top: 168px;
+  height: auto;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.view-doctors::-webkit-scrollbar {
+  display: none;
+}
+
+.topbar {
+  width: 375px;
+  height: 168px;
+  /* top: 44px; */
+  background-color: white;
+  /* padding-left: 12px;
+  padding-right: 20px; */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bar {
+  width: 375px;
+  height: 56px;
+  margin-top: 44px;
+}
+
+.title-view {
+  margin-left: 94px;
+  margin-right: 89px;
+  width: 82px;
+  height: 22px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+  display: block;
+}
+
+.bar-container .filter {
+  width: 38px;
+  height: 22px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2680c2;
+  display: block;
+}
+
+.bar-container .prev {
+  display: contents;
+}
+
+.search {
+  margin-bottom: 20px;
+}
+.form-inline input {
+  width: 335px;
+  height: 48px;
+  padding: 12px;
+  background-color: #f0f4f8;
+  border: none;
+  border-radius: 10px;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  /* identical to box height */
+
+  color: #9fb3c8 !important;
+}
+
+.form-inline input[type="search"] {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  color: #102a43 !important;
+}
+
+.form-control:focus {
+  background-color: white;
+  border: 1px solid #f0f4f8;
+  box-shadow: none;
+}
+
+.doc-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background-image: url("/images/doctor.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.doc-info {
+  margin-right: 97px;
+  margin-left: 12px;
+}
+
+.doc-name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+  margin-bottom: 4px;
+}
+
+.doc-spel {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #627d98;
+}
+
+.divider {
+  width: 335px;
+  height: 1px !important;
+  background: #f0f4f8 !important;
+  margin: 8px 20px !important;
+  filter: blur(4px);
+}

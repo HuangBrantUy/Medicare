@@ -1,0 +1,167 @@
+.doctor-wrapper {
+  max-width: 375px;
+}
+
+.topbar-doctor {
+  width: 375px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bar-doctor {
+  width: 375px;
+  height: 56px;
+  margin-top: 44px;
+}
+
+.bar-doctor .bar-container {
+  margin-left: 24px;
+}
+.bar-container .prev {
+  display: contents;
+}
+
+.photo {
+  width: 375px;
+  height: 463px;
+  background-image: url("/images/doctor.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: fixed;
+}
+
+.info-box {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(127, 163, 202, 0.2);
+  width: 375px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: absolute;
+  top: 406px;
+  height: auto;
+  overflow-y: auto;
+  padding: 32px 20px;
+}
+
+.info-doc {
+  margin-bottom: 12px;
+}
+
+.info-name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: #102a43;
+  margin-bottom: 4px;
+}
+
+.info-specialization {
+  font-family: Avenir Next;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  color: #627d98;
+}
+
+.info-rate {
+  margin-bottom: 8px;
+}
+.rate-icon {
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+}
+.info-rate svg.svg-inline--fa.fa-star.fa-w-18 {
+  width: 16px;
+  height: 16px;
+  color: #f7c948;
+}
+
+.info-rate span {
+  margin-left: 8px;
+  width: 24px;
+  height: 22px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+}
+
+.info-patients-experience {
+  width: 268px;
+  margin-bottom: 28px;
+}
+
+.info-patients svg.svg-inline--fa.fa-users-medical.fa-w-20 {
+  width: 20px;
+  height: 16px;
+  color: #627d98;
+}
+
+.info-patients span {
+  margin-left: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+}
+
+.info-experience svg.svg-inline--fa.fa-graduation-cap.fa-w-20 {
+  width: 20px;
+  height: 20px;
+  color: #627d98;
+}
+
+.info-experience span {
+  margin-left: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+}
+
+.info-about {
+  margin-bottom: 32px;
+}
+
+.info-about h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #102a43;
+  margin-bottom: 8px;
+}
+
+.info-about p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #102a43;
+}
+
+#book-appointment-btn {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px 96.96px;
+  background: #2680c2;
+  box-shadow: 0px 8px 16px -8px rgba(3, 83, 136, 0.4);
+  border-radius: 100px;
+  border: none;
+}

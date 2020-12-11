@@ -44,11 +44,11 @@ const createToken = (id) => {
 }
 
 module.exports.signup_get = (req,res)=>{
-    res.render('signup', { title:'Sign Up | Medicare'});
+    res.render('doctor-pages/signup', { title:'Sign Up | Medicare'});
 }
 
 module.exports.login_get = (req,res)=>{
-    res.render('login',  { title:'Login | Medicare'});
+    res.render('doctor-pages/login',  { title:'Login | Medicare'});
 }
 
 module.exports.signup_post = async(req,res)=>{
@@ -87,5 +87,5 @@ module.exports.logout_get = (req, res) => {
 
 
 module.exports.dashboard_get = (req, res) =>{
-    res.render('dashboard-layout');
+    res.render('layouts/dashboard-layout');
 }

@@ -1,0 +1,192 @@
+.activity-wrapper {
+  width: 375px;
+  max-width: 375px;
+  position: absolute;
+  top: 153px;
+  height: auto;
+  overflow-y: auto;
+  margin-bottom: 106px;
+}
+
+.activity-topbar {
+  width: 375px;
+  height: 153px;
+  /* top: 44px; */
+  background-color: white;
+  /* padding-left: 12px;
+  padding-right: 20px; */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.activity-bar {
+  width: 375px;
+  height: 65px;
+  margin-top: 44px;
+}
+
+.activity-bar .bar-container {
+  width: 375px;
+}
+
+.title-activity {
+  margin-left: 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+
+  color: #102a43;
+}
+
+.history {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #2680c2;
+  margin-right: 20px;
+}
+
+.activity-nav {
+  width: 375px;
+  height: 24px;
+}
+
+.pending .nav-link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  padding: 4px 36px;
+  color: #2680c2;
+  background: white !important;
+  border-radius: 20px !important;
+  margin-left: 20px;
+}
+
+.pending .nav-link.active {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  padding: 4px 36px;
+  color: #ffffff;
+  background: #2680c2 !important;
+  border-radius: 20px !important;
+}
+
+.confirmed .nav-link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  padding: 4px 29px;
+  color: #2680c2;
+  background: white !important;
+  border-radius: 20px !important;
+}
+
+.confirmed .nav-link.active {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  padding: 4px 29px;
+  color: #ffffff;
+  background: #2680c2 !important;
+  border-radius: 20px !important;
+}
+
+.activity-nav .nav-item:nth-child(2) {
+  margin: 0;
+}
+
+.booked-card {
+  background: #ffffff;
+  /* shadow */
+  box-shadow: 0px 10px 10px rgba(36, 59, 83, 0.05);
+  border-radius: 10px;
+  padding: 20px 20px;
+  width: 335px;
+  height: 171px;
+  margin-bottom: 20px;
+}
+
+.booked-header {
+  margin-bottom: 18px;
+}
+
+.booked-id {
+  margin-bottom: 0;
+  margin-right: 105px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: #102a43;
+}
+
+.booked-body {
+  margin-left: 12px;
+}
+
+.booked-doctor {
+  margin-bottom: 12px;
+}
+.booked-doctor .doc-name {
+  margin-left: 8px;
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  color: #102a43;
+}
+
+svg.svg-inline--fa.fa-user-md.fa-w-14 {
+  width: 20px;
+  height: 20px;
+}
+
+.booked-specialization {
+  margin-left: 28px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #627d98;
+  margin-bottom: 12px;
+}
+
+.booked-sched .date-time {
+  margin-bottom: 0;
+  margin-left: 8px;
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  color: #102a43;
+}
+
+svg.svg-inline--fa.fa-calendar-day.fa-w-14 {
+  width: 20px;
+  height: 20px;
+}

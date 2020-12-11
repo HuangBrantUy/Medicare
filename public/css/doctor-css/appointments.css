@@ -1,0 +1,30 @@
+.appointments-main-header {
+    display: inline;
+}
+
+.search {
+    float: right;
+    display: inline;
+    margin-top: -35px;
+    margin-right: 93px;
+    display:flex;
+    align-items: center; 
+}
+
+.material-icons{
+  position:absolute;
+  padding-left: 3px;
+}
+
+input{
+  padding-left: 25px;
+}
+
+.appointments-status {
+    width: 100px;
+    margin: auto;
+    border-radius: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

@@ -1,0 +1,48 @@
+<div class="signup-wrapper">
+        <div class="topbar-signup">
+            <div class="bar-signup d-flex align-items-center">
+                <div class="bar-container d-flex align-items-center">
+                    <a class="prev" href="#" onclick="javascript:window.history.back(-1);return false;"><img src="/images/left-arrow.svg"></a>
+                </div>
+            </div>
+        </div>
+    <div class="d-flex justify-content-center align-items-center">
+        <!-- Start of the sign up form -->
+        <form id="signup-form">
+            <div class="heading">
+                <h1>Sign Up</h1>
+                <p>Want to apply as doctor? Join us.</p>
+            </div>
+
+            <div class="form-group" id="signup-fullname">
+                <label for="exampleInputFullName">Full Name</label>
+                <input type="name" class="form-control" id="exampleInputFullName" aria-describedby="nameHelp">
+            </div>
+            <div class="form-group" id="signup-number">
+                <label for="exampleInputNumber">Mobile Number</label>
+                <div class="number d-flex">
+                    <img id="flag" src="/images/flag.png" height="18px">
+                    <span>+63</span>
+                    <input type="text" class="form-control ml-auto" id="exampleInputNumber">
+                </div>
+            </div>
+            <div class="form-group" id="signup-email">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                <div class="email error"></div>
+            </div>
+            <div class="form-group" id="signup-password">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                <div class="password error"></div>
+            </div>
+            <div class="form-navigation">
+                <button type="submit" class="btn btn-primary" id="confirm-btn">Sign Up</button>
+            </div>
+            <div id="terms">
+                <p>By signing up, you hereby agree to our <br><a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+            </div>
+        </form>
+        <!-- End of the signup form -->
+    </div>
+</div>

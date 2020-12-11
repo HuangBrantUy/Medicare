@@ -1,60 +1,14 @@
-.nav-item {
-  list-style-type: none;
-}
-
-.nav-item:nth-child(2) {
-  margin: 0 40px;
-}
-
-.nav-item a {
-  text-align: center;
-  color: #2680c2;
-}
-
-.navbar {
-  width: 375px;
-  height: 106px;
-  background: white;
-  margin-right: auto;
-  margin-left: auto;
-  box-shadow: 0px 0px 20px rgba(127, 163, 202, 0.2);
-}
-
-.nav-item span {
-  display: block;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 15px;
-}
-
-svg.svg-inline--fa.fa-home-lg-alt.fa-w-18 {
-  width: 24px;
-  height: 24px;
-}
-
-svg.svg-inline--fa.fa-clipboard-list-check.fa-w-12 {
-  width: 24px;
-  height: 24px;
-}
-
-svg.svg-inline--fa.fa-user-circle.fa-w-16 {
-  width: 24px;
-  height: 24px;
-}
-
-.wrapper {
-  width: 375px;
-}
-
-/*home*/
 .home-wrapper {
   max-width: 375px;
   position: absolute;
   top: 76px;
   height: auto;
-  overflow-y: scroll;
-  margin-bottom: 20px;
+  overflow-y: auto;
+  margin-bottom: 106px;
+}
+
+.home-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .doctor-view {
@@ -97,6 +51,7 @@ svg.svg-inline--fa.fa-user-circle.fa-w-16 {
   margin-bottom: 28px;
   padding: 0 20px;
 }
+
 .doctor-set::-webkit-scrollbar {
   display: none;
 }
@@ -109,8 +64,9 @@ svg.svg-inline--fa.fa-user-circle.fa-w-16 {
   height: 120px;
   border-radius: 10px;
   background-image: url("/images/doctor.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
   margin-bottom: 12px;
 }
 
@@ -135,7 +91,7 @@ h6.name {
   margin-right: 6px;
 }
 
-svg.svg-inline--fa.fa-star.fa-w-18 {
+.rate svg.svg-inline--fa.fa-star.fa-w-18 {
   width: 14px;
   height: 14px;
   color: #f7c948 !important;
@@ -157,9 +113,10 @@ h6.specialization {
   margin-bottom: 8px;
 }
 
-svg.svg-inline--fa.fa-users-medical.fa-w-20 {
+.patients svg.svg-inline--fa.fa-users-medical.fa-w-20 {
   width: 20px;
   height: 16px;
+  color: #627d98;
 }
 
 .patients span {
@@ -171,9 +128,10 @@ svg.svg-inline--fa.fa-users-medical.fa-w-20 {
   margin-left: 4px;
 }
 
-svg.svg-inline--fa.fa-graduation-cap.fa-w-20 {
+.experience svg.svg-inline--fa.fa-graduation-cap.fa-w-20 {
   width: 16px;
   height: 16px;
+  color: #627d98;
 }
 
 .experience span {
