@@ -1,18 +1,33 @@
 <!-- Modal -->
-<div class="modal fade" id="book-appointment" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal" id="book-appointment" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="bar-container d-flex justify-content-center align-items-center">
-                    <a class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="/images/close.svg"></a>
+                    <a class="close" type="button" aria-label="Close"><img src="/images/close.svg"></a>
                     <span class="title-appointment">Book Appointment</span>
                 </div>
             </div>
-            <div class="modal-body">
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button type="button" id="book-now-btn" class="btn btn-primary">Book Now</button>
-            </div>
+            <form>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Choose Date</label>
+                            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Choose Time</label>
+                            <input type="time" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" id="book-now-btn" class="btn btn-primary">Book Now</button>
+                        <!-- <div class="modal-footer d-flex justify-content-center">
+                        <button type="submit" id="book-now-btn" class="btn btn-primary">Book Now</button>
+                    </div> -->
+                    </form>
+                </div>
         </div>
     </div>
 </div>
+
+<script>
+</script>

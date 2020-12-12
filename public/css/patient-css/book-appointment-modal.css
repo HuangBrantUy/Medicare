@@ -21,10 +21,13 @@
 .modal.in .modal-dialog {
   transform: translateY(0px);
 } */
-
+.modal-backdrop {
+  background-color: rgba(38, 128, 194, 0.9) !important;
+  opacity: 0.9 !important;
+}
 #book-appointment .modal-dialog {
   margin: 0;
-  top: 56px;
+  top: 474px;
 }
 
 #book-appointment .modal-content {
@@ -84,4 +87,68 @@
   border-radius: 100px;
   border: none;
   margin: 0;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 812px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideInUp {
+  from {
+    transform: translate3d(0, 812px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+  -webkit-animation-name: slideInUp;
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 812px, 0);
+  }
+}
+
+@-webkit-keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 812px, 0);
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.slideOutDown {
+  animation-name: slideOutDown;
+  -webkit-animation-name: slideOutDown;
 }
