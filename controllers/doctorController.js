@@ -1,6 +1,6 @@
 const { response } = require('express');
 const jwt = require('jsonwebtoken')
-const Patient = require('../models/Patient');
+const Doctor = require('../models/Doctor');
 
 //Error handler
 const handleErrors = (err) => {
@@ -44,21 +44,21 @@ const createToken = (id) => {
 }
 
 module.exports.signup_get = (req,res)=>{
-    res.render('patient-pages/patient-signup', { layout: 'layouts/patient-layout'});
+    res.render('doctor-pages/signup', { title:'Sign Up | Medicare'});
 }
 
 module.exports.login_get = (req,res)=>{
-    res.render('patient-pages/patient-login',  { layout: 'layouts/patient-layout'});
+    res.render('doctor-pages/login',  { title:'Login | Medicare'});
 }
 
 module.exports.signup_post = async(req,res)=>{
     const { email, password } = req.body;
     
     try{
-        const patient = await Patient.create({ email, password });
-        const token = createToken(patient._id); 
+        const doctor = await Doctor.create({ email, password });
+        const token = createToken(doctor._id); 
         res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge*1000});
-        res.status(201).json({user:patient._id});
+        res.status(201).json({user:doctor._id});
     }
     catch(err){
         const errors = handleErrors(err);
@@ -70,10 +70,10 @@ module.exports.login_post = async (req,res)=>{
     const { email, password } = req.body; //destructuring 
 
     try{
-        const patient = await Patient.login(email, password);
-        const token = createToken(patient._id); 
+        const doctor = await Doctor.login(email, password);
+        const token = createToken(doctor._id); 
         res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge*1000});
-        res.status(200).json({user: patient._id});
+        res.status(200).json({user: doctor._id});
     } catch(err) {
         const errors = handleErrors(err);
         res.status(400).json({ errors });
@@ -82,7 +82,7 @@ module.exports.login_post = async (req,res)=>{
 
 module.exports.logout_get = (req, res) => {
     res.cookie('jwt', '', {maxAge: 1});
-    res.redirect('/patient-login');
+    res.redirect('/');
 }
 
 

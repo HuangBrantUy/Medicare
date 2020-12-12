@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt')
 
 
 
-const userSchema = new mongoose.Schema({
+const doctorSchema = new mongoose.Schema({
     email: {
         type: String,
         required: [true, 'Please enter an email'],
@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
 
 //Fire a function after doc saved to db
 
-userSchema.post('save', function(doc, next){
+doctorSchema.post('save', function(doc, next){
     console.log('New user was created and saved', doc)
     next();
 });
@@ -31,7 +31,7 @@ userSchema.post('save', function(doc, next){
 
 // Fire a function after doc saved to db
 
-userSchema.pre('save', async function(next){
+doctorSchema.pre('save', async function(next){
     const salt = await bcrypt.genSalt();
     this.password = await bcrypt.hash(this.password, salt);
     next();
@@ -39,7 +39,7 @@ userSchema.pre('save', async function(next){
 
 //static method to login user
 
-userSchema.statics.login = async function(email, password){
+doctorSchema.statics.login = async function(email, password){
     const user = await this.findOne({ email });
 
     if(user){
@@ -54,8 +54,8 @@ userSchema.statics.login = async function(email, password){
 
 
 // this model inserts to the 'users' in the db
-const User = mongoose.model('user', userSchema); //singular of the name in the db
+const Doctor = mongoose.model('doctor', doctorSchema); //singular of the name in the db
 
 
 
-module.exports = User;
+module.exports = Doctor;
