@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const Doctor = require('../models/Doctor');
+const Patient = require('../models/Patient');
 
 const requireDocAuth = (req, res, next) => {
 
