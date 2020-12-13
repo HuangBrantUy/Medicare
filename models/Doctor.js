@@ -18,6 +18,18 @@ const doctorSchema = new mongoose.Schema({
         required: [true, 'Please enter an password'],
         minlength: [6, 'minimum password length is 6 characters']
     },
+    firstName: {
+        type: String,
+        required: [true, 'Please enter your name'],
+    },
+    lastName: {
+        type: String,
+        required: [true, 'please enter your last name']
+    },
+    mobileNumber: {
+        type: Number,
+        minlength: [10, 'please enter a valid phone number']
+    }
 });
 
 

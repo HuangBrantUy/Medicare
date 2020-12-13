@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const authController = require('../controllers/authController');
 const doctorController = require('../controllers/doctorController');
+const { requireDocAuth, checkDoctor } = require('../middleware/doctorMiddleware');
 const router = Router();
 
 router.get('/signup', doctorController.signup_get);
@@ -23,5 +24,6 @@ router.get('/patient-signup', authController.signup_get);
 router.post('/patient-login', authController.login_post);
 router.post('/patient-signup', authController.signup_post);
 router.get('/patient-logout', authController.logout_get);
+router.get('/home', requireDocAuth, authController.patient_index);
 
 module.exports = router;

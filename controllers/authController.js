@@ -1,6 +1,7 @@
 const { response } = require('express');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 const Patient = require('../models/Patient');
+const Doctor = require('../models/Doctor');
 
 //Error handler
 const handleErrors = (err) => {
@@ -43,8 +44,18 @@ const createToken = (id) => {
 
 }
 
+module.exports.patient_index = (req, res) => {
+    Doctor.find().sort({ createdAt: -1 })
+        .then((result) => {
+            res.render('patient-pages/patient-home',  { layout: 'layouts/patient-layout', doctors: result })
+        })
+        .catch(err => {
+            console.log(err);
+          });
+}
+
 module.exports.signup_get = (req,res)=>{
-    res.render('patient-pages/patient-signup', { layout: 'layouts/patient-layout'});
+    res.render('patient-pages/patient-signup', { title: 'Sign Up | Medicare' ,layout: 'layouts/patient-layout'});
 }
 
 module.exports.login_get = (req,res)=>{
