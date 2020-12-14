@@ -9,7 +9,7 @@
         <% if (doctors.length > 0) { %>                                    
             <% doctors.forEach(doctor => { %>
         <div class="doctor">
-            <a href="/view-doctor" class="doc-link">
+            <a href="/view-doctor/<%= doctor._id %>" class="doc-link">
                 <div class="picture"></div>
                 <div class="name-rate d-flex justify-content-between align-items-center">
                     <h6 class="name">Dr. <%= doctor.firstName%> <%= doctor.lastName %></h6>

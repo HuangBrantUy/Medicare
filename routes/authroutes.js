@@ -24,6 +24,9 @@ router.get('/patient-signup', authController.signup_get);
 router.post('/patient-login', authController.login_post);
 router.post('/patient-signup', authController.signup_post);
 router.get('/patient-logout', authController.logout_get);
+
 router.get('/home', requireDocAuth, authController.patient_index);
+router.get('/view-doctor/:id', requireDocAuth, authController.doctor_details);
+router.get('/view-all-doctors', requireDocAuth, authController.view_all_doctors);
 
 module.exports = router;

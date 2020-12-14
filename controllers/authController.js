@@ -44,6 +44,30 @@ const createToken = (id) => {
 
 }
 
+
+module.exports.doctor_details = (req, res) => {
+    const id = req.params.id;
+    Doctor.findById(id)
+     .then((result)=>{
+         res.render('patient-pages/view-doctor', {layout: 'layouts/patient-layout', doctor:result})
+     })
+     .catch(err =>{
+         console.log(err);
+     })
+}
+
+
+module.exports.view_all_doctors = (req, res) =>{
+    Doctor.find().sort({ createdAt: -1 })
+        .then((result)=>{
+            res.render('patient-pages/patient-all-doctors', { layout: 'layouts/patient-layout', doctors: result, })
+        })
+        .catch(err => {
+            console.log(err);
+        })
+}
+
+
 module.exports.patient_index = (req, res) => {
     Doctor.find().sort({ createdAt: -1 })
         .then((result) => {
