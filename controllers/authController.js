@@ -47,7 +47,7 @@ const createToken = (id) => {
 module.exports.patient_index = (req, res) => {
     Doctor.find().sort({ createdAt: -1 })
         .then((result) => {
-            res.render('patient-pages/patient-home',  { layout: 'layouts/patient-layout', doctors: result })
+            res.render('patient-pages/patient-home',  { layout: 'layouts/patient-layout', doctors: result, })
         })
         .catch(err => {
             console.log(err);
