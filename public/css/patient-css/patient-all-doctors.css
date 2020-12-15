@@ -90,6 +90,12 @@
   box-shadow: none;
 }
 
+.doc a {
+  width: 335px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .doc-photo {
   width: 80px;
   height: 80px;
@@ -101,7 +107,7 @@
 }
 
 .doc-info {
-  margin-right: 97px;
+  margin-right: auto;
   margin-left: 12px;
 }
 

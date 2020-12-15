@@ -21,13 +21,14 @@
 .modal.in .modal-dialog {
   transform: translateY(0px);
 } */
+
 .modal-backdrop {
   background-color: rgba(38, 128, 194, 0.9) !important;
   opacity: 0.9 !important;
 }
 #book-appointment .modal-dialog {
-  margin: 0;
   top: 474px;
+  margin: auto;
 }
 
 #book-appointment .modal-content {
