@@ -11,7 +11,7 @@ router.post('/login', doctorController.login_post);
 router.get('/logout', doctorController.logout_get);
 
 //new routes
-router.get('/dashboard', authController.dashboard_get);
+// router.get('/dashboard', authController.dashboard_get);
 // router.get('/apointments', authController.dashboard_get);
 // router.get('/patients', authController.dashboard_get);
 // router.get('/requests', authController.dashboard_get);
@@ -28,5 +28,8 @@ router.get('/patient-logout', authController.logout_get);
 router.get('/home', requireDocAuth, authController.patient_index);
 router.get('/view-doctor/:id', requireDocAuth, authController.doctor_details);
 router.get('/view-all-doctors', requireDocAuth, authController.view_all_doctors);
+router.get('/patient-activity', requireDocAuth, authController.paient_activity);
+router.get('/patient-account', requireDocAuth, authController.patient_account);
+router.post('/book-appointment', requireDocAuth, authController.book_appointment_post);
 
 module.exports = router;

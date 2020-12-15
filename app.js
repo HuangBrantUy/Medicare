@@ -28,14 +28,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 // routes
 app.get('*', checkDoctor);
 
-// patient routes
-// app.get('/home', requireDocAuth, (req, res) => res.render ('patient-pages/patient-home',  {layout: 'layouts/patient-layout'}));
-// app.get('/view-all-doctors', requireDocAuth, (req, res) => res.render ('patient-pages/patient-all-doctors',  {layout: 'layouts/patient-layout'}));
-// app.get('/view-doctor', requireDocAuth, (req, res) => res.render ('patient-pages/view-doctor',  {layout: 'layouts/patient-layout'}));
-app.get('/patient-activity', requireDocAuth, (req, res) => res.render ('patient-pages/patient-activity',  {layout: 'layouts/patient-layout'}));
-app.get('/patient-account', requireDocAuth, (req, res) => res.render ('patient-pages/patient-account',  {layout: 'layouts/patient-layout'}));
-// app.get('/patient-login', requireDocAuth, (req, res) => res.render ('patient-pages/patient-login',  {layout: 'layouts/patient-layout'}));
-// app.get('/patient-signup', requireDocAuth, (req, res) => res.render ('patient-pages/patient-signup',  {layout: 'layouts/patient-layout'}));
+// All patient routes have been moved to the authroutes folder
 
 // doctor routes
 app.get('/', requireDocAuth, (req,res)=> res.render('doctor-pages/dashboard-home', { layout: 'layouts/dashboard-layout'}));
