@@ -59,6 +59,37 @@
   margin-bottom: 4px;
 }
 
+.status {
+  padding: 4px 12px;
+  /* background: #fcefc7; */
+  border-radius: 100px;
+  margin-left: 12px;
+}
+
+.status .pending {
+  background: #fcefc7;
+}
+
+.status .confirmed {
+  background: #c6f7e9;
+}
+
+.status .label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+}
+
+.status .label .pending {
+  color: #c99a2e;
+}
+
+.status .label .confirmed {
+  color: #079a82;
+}
+
 .info-specialization {
   font-family: Avenir Next;
   font-style: normal;
