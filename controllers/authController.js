@@ -89,6 +89,7 @@ module.exports.patient_index = (req, res) => {
           });
 }
 
+
 module.exports.book_appointment_post = (req,res) => {
     const {doctor_id, appointment_date, appointment_time} = req.body
 
@@ -101,27 +102,25 @@ module.exports.book_appointment_post = (req,res) => {
 //hard code the status false = pending
     const status = false;
 
-    
-
     try {
         const request = Request.create({doctor_id, user_id, appointment_date, appointment_time, status});
         res.redirect('/home');
     } catch (err) {
-        console.log(err);
+       res.status(400);
     }
-    console.log(appointment_date, appointment_time, status, doctor_id, user_id );
+    console.log(res);
 }
 //End of Patient Pages
 
 
 
-// Authentication Pages (Sign in, Sign up, Log out)
-module.exports.signup_get = (req,res)=>{
-    res.render('patient-pages/patient-signup', { title: 'Sign Up | Medicare' ,layout: 'layouts/patient-layout'});
-}
+// Authentication Pages (Sign in, Sign up, Log out)\
 
 module.exports.login_get = (req,res)=>{
     res.render('patient-pages/patient-login',  { layout: 'layouts/patient-layout', title:'Log in | Medicare'});
+}
+module.exports.signup_get = (req,res)=>{
+    res.render('patient-pages/patient-signup', { title: 'Sign Up | Medicare' ,layout: 'layouts/patient-layout'});
 }
 
 module.exports.signup_post = async(req,res)=>{

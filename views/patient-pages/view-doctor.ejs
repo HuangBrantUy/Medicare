@@ -48,3 +48,65 @@
         </button>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal" id="book-appointment" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="bar-container d-flex justify-content-center align-items-center">
+                    <a class="close" type="button" aria-label="Close"><img src="/images/close.svg"></a>
+                    <span class="title-appointment">Book Appointment</span>
+                </div>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Choose Date</label>
+                            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="appointment_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Choose Time</label>
+                            <input type="time" class="form-control" id="exampleInputPassword1" name="appointment_time">
+                        </div>
+                        <button type="submit" id="book-now-btn" class="btn btn-primary">Book Now</button>
+                        <!-- <div class="modal-footer d-flex justify-content-center">
+                        <button type="submit" id="book-now-btn" class="btn btn-primary">Book Now</button>
+                    </div> -->
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+
+        //get the values
+        const doctor_id = '<%= doctor._id%>';
+        const appointment_date = form.appointment_date.value;
+        const appointment_time = form.appointment_time.value;
+
+        try {
+            const res = await fetch('/book-appointment', {
+                method: 'POST',
+                body: JSON.stringify({doctor_id, appointment_date, appointment_time }),
+                headers: { 'Content-Type': 'application/JSON' }
+            });
+            const data = await res.json();
+            console.log(data)
+  
+            if(data){
+                windows.location.href = '/home';
+            }
+        } catch (err) {
+
+        }
+
+    });
+</script>

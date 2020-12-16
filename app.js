@@ -30,8 +30,8 @@ app.get('*', checkDoctor);
 
 // patient routes have been moved to the auth routes
 
-app.get('/patient-activity', requireDocAuth, (req, res) => res.render ('patient-pages/patient-activity',  {layout: 'layouts/patient-layout'}));
-app.get('/patient-account', requireDocAuth, (req, res) => res.render ('patient-pages/patient-account',  {layout: 'layouts/patient-layout'}));
+// app.get('/patient-activity', requireDocAuth, (req, res) => res.render ('patient-pages/patient-activity',  {layout: 'layouts/patient-layout'}));
+// app.get('/patient-account', requireDocAuth, (req, res) => res.render ('patient-pages/patient-account',  {layout: 'layouts/patient-layout'}));
 app.get('/view-doctor-pending', requireDocAuth, (req, res) => res.render ('patient-pages/view-doctor-pending',  {layout: 'layouts/patient-layout'}));
 app.get('/view-doctor-confirmed', requireDocAuth, (req, res) => res.render ('patient-pages/view-doctor-confirmed',  {layout: 'layouts/patient-layout'}));
 
