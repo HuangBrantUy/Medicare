@@ -13,8 +13,11 @@
                 <h1 class="info-name">Dr. <%= doctor.firstName %>
                         <%= doctor.lastName%>
                 </h1>
-                <div class="status" style="display: none;" id="booking-status">
-                    <span class="label" id="booking status">Pending</span>
+                <div class="status pending" style="display: none;">
+                    <span class="label pending">Pending</span>
+                </div>
+                <div class="status confirmed" style="display: none;">
+                    <span class="label confirmed">Confirmed</span>
                 </div>
             </div>
             <h2 class="info-specialization">Psychiatrist</h2>
@@ -46,6 +49,9 @@
         <button type="button" id="book-appointment-btn" class="btn btn-primary" data-toggle="modal" data-target="#book-appointment">
             Book Appointment
         </button>
+                <button type="button" style="display: none;"id="come-in-btn" class="btn btn-primary">
+                    Come In
+                </button>
     </div>
 </div>
 
