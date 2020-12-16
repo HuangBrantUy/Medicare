@@ -8,11 +8,11 @@ const patientSchema = new mongoose.Schema({
     user_id: {
         type: String,
     },
-    bookingDate: {
+    appointment_date: {
         type: String,
         required: [true, 'please enter a date']
     },
-    bookingTime: {
+    appointment_time: {
         type: String,
         required: [true, 'please select a time']
     },

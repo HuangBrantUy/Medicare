@@ -35,6 +35,7 @@
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        const doctor_id = '<%= doctor._id %>'
         //get the values
         const appointment_date = form.appointment_date.value;
         const appointment_time = form.appointment_time.value;
@@ -42,7 +43,7 @@
         try {
             const res = await fetch('/book-appointment', {
                 method: 'POST',
-                body: JSON.stringify({appointment_date, appointment_time }),
+                body: JSON.stringify({ doctor_id, appointment_date, appointment_time }),
                 headers: { 'Content-Type': 'application/JSON' }
             });
             const data = await res.json();
@@ -51,7 +52,7 @@
                 location.assign('/home');
             }
         } catch (err) {
-            console.log(err);
+
         }
 
     });

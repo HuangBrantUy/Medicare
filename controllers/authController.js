@@ -90,19 +90,28 @@ module.exports.patient_index = (req, res) => {
 }
 
 module.exports.book_appointment_post = (req,res) => {
-    const {bookingDate, bookingTime } = req.body
+    const {doctor_id, appointment_date, appointment_time} = req.body
+
+
+//decode token to get user id
+    const token = req.cookies.jwt;
+    const decoded = jwt.verify(token, 'valhalla');
+    const user_id = decoded.id;
+
+//hard code the status false = pending
     const status = false;
-    const doctor_id = req.doctor_id
-    const user_id = req.user_id
-    try{
-        const request = Request.create({doctor_id, user_id, bookingDate, bookingTime, status});
+
+    
+
+    try {
+        const request = Request.create({doctor_id, user_id, appointment_date, appointment_time, status});
+        res.redirect('/home');
+    } catch (err) {
+        console.log(err);
     }
-    catch(err){
-        res.status(400).json({errors});
-    }
+    console.log(appointment_date, appointment_time, status, doctor_id, user_id );
 }
 //End of Patient Pages
-
 
 
 
