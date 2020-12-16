@@ -12,6 +12,9 @@
             <div class="name-status d-flex align-items-center">
                 <h1 class="info-name">Dr.Eduardo Stan
                 </h1>
+                <div class="status pending" style="display: none;">
+                    <span class="label pending">Pending</span>
+                </div>
                 <div class="status confirmed">
                     <span class="label confirmed">Confirmed</span>
                 </div>
@@ -42,8 +45,11 @@
             <h3>About</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique ut rhoncus, netus sit. Dui, viverra vitae ut pulvinar. Auctor morbi at magna dignissim maecenas est ac. Pellentesque feugiat urna commodo bibendum.</p>
         </div>
-        <button type="button" id="book-appointment-btn" class="btn btn-primary" data-toggle="modal" data-target="#book-appointment">
+        <button type="button" style="display: none;" id="book-appointment-btn" class="btn btn-primary" data-toggle="modal" data-target="#book-appointment">
             Book Appointment
+        </button>
+        <button type="button" id="come-in-btn" class="btn btn-primary">
+            Come In
         </button>
     </div>
 </div>
