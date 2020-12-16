@@ -29,6 +29,7 @@
 #book-appointment .modal-dialog {
   top: 474px;
   margin: auto;
+  width: 375px;
 }
 
 #book-appointment .modal-content {

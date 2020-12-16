@@ -28,7 +28,13 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 // routes
 app.get('*', checkDoctor);
 
-// All patient routes have been moved to the authroutes folder
+// patient routes have been moved to the auth routes
+
+app.get('/patient-activity', requireDocAuth, (req, res) => res.render ('patient-pages/patient-activity',  {layout: 'layouts/patient-layout'}));
+app.get('/patient-account', requireDocAuth, (req, res) => res.render ('patient-pages/patient-account',  {layout: 'layouts/patient-layout'}));
+app.get('/view-doctor-pending', requireDocAuth, (req, res) => res.render ('patient-pages/view-doctor-pending',  {layout: 'layouts/patient-layout'}));
+app.get('/view-doctor-confirmed', requireDocAuth, (req, res) => res.render ('patient-pages/view-doctor-confirmed',  {layout: 'layouts/patient-layout'}));
+
 
 // doctor routes
 app.get('/', requireDocAuth, (req,res)=> res.render('doctor-pages/dashboard-home', { layout: 'layouts/dashboard-layout'}));
