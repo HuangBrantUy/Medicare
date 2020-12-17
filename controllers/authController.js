@@ -52,7 +52,17 @@ module.exports.paient_activity = (req,res) => {
 }
 
 module.exports.patient_account = (req,res) => {
-    res.render('patient-pages/patient-account',  {layout: 'layouts/patient-layout', title: 'Profile'});
+    const token = req.cookies.jwt;
+    const decoded = jwt.verify(token, 'valhalla');
+    const id = decoded.id;
+    Patient.findById(id)
+        .then((result) => {
+            res.render('patient-pages/patient-account',  {layout: 'layouts/patient-layout', title: 'Profile', user:result});
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    
 }
 
 
@@ -124,10 +134,10 @@ module.exports.signup_get = (req,res)=>{
 }
 
 module.exports.signup_post = async(req,res)=>{
-    const { email, password } = req.body;
+    const { firstName, lastName, mobileNumber, email, password } = req.body;
     
     try{
-        const patient = await Patient.create({ email, password });
+        const patient = await Patient.create({ firstName, lastName, mobileNumber, email, password });
         const token = createToken(patient._id); 
         res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge*1000});
         res.status(201).json({user:patient._id});

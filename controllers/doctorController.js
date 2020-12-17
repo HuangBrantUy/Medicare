@@ -52,7 +52,7 @@ module.exports.login_get = (req,res)=>{
 }
 
 module.exports.signup_post = async(req,res)=>{
-    const { firstName, lastName, mobileNumber, email, password,   } = req.body;
+    const { firstName, lastName, mobileNumber, email, password   } = req.body;
     
     try{
         const doctor = await Doctor.create({ firstName, lastName, mobileNumber, email, password });
