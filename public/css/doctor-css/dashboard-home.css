@@ -1,218 +1,306 @@
+.appointment-col {
+  width: 884px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(127, 163, 202, 0.1);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.patient-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #c4c4c4;
+}
+
+.col-right {
+  margin-left: 16px;
+  margin-right: auto;
+}
+
+.col-left {
+  margin-right: 12px;
+}
+.appointment-reason {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+}
+
+.sched-time {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+}
+
+.vertical {
+  margin: 0px 8px;
+  border-left: 2px solid #102a43;
+  height: 16px;
+}
+.sched-date {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+}
+
+.consultation-fee {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+}
+
+.name-patient {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: left;
+
+  color: #627d98;
+}
+
+.right-icon {
+  display: contents;
+}
+.appointment-status {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: right;
+
+  color: #627d98;
+}
+
+#status-pending {
+  color: #c99a2e;
+}
+
+#status-accept {
+  color: #079a82;
+}
+
+#status-done {
+  color: #9aa5b1;
+}
+
+#status-decline {
+  color: #a61b1b;
+}
+/*Pending Requests*/
 table {
-    border-collapse: collapse;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    overflow: hidden;
-    border-style: hidden; /* hide standard table (collapsed) border */
-    box-shadow: 0 0 0 2px rgb(132, 197, 244); /* this draws the table border  */
-    font-size: 15px;
-    table-layout: fixed;
+  border-collapse: collapse;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  border-style: hidden; /* hide standard table (collapsed) border */
+  box-shadow: 0 0 0 2px rgb(132, 197, 244); /* this draws the table border  */
+  font-size: 15px;
+  table-layout: fixed;
 }
 
 tr {
-    width: 25%;
-}
-
-.main {
-    margin: 30px;
-    margin-right: 100px;
-    color: black;
-    padding-top: 10px;
-    font-family: "Avenir Next";
-}
-
-.appointments-container {
-    width: auto;
-    margin-bottom: 30px;
-    margin-top: 20px;
-}
-
-.appointment {
-    display: inline-block;
-    width: 333px;
-    border-radius: 10px;
-    border-color: rgb(132, 197, 244);
-    border-style: solid;
-    border-width: 2px;
-    padding: 20px;
-    margin-right: 20px;
-}
-
-.appointment-body {
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.days {
-    margin-top: -7px;
-    font-size: small;
-    color: gray;
-}
-
-.appointment-footer {
-    text-align: center;
-    margin-bottom: -21px;
-    margin-left: -20px;
-    background-color: lightblue;
-    width: 114%;
-    height: 50px;
-    overflow: hidden;
-    padding-top: 13px;
-    color: rgb(38, 128, 194);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    font-weight: bold;
-}
-
-.status {
-    float: right;
-    margin-top: -30px;
-    font-size: 12px;
+  width: 25%;
 }
 
 .pending-requests {
-    
-    width: 1050px;
+  width: 1050px;
 }
 
 .requests {
-    width: 1048px;
+  width: 1048px;
 }
 
 .picture {
-    display: inline-flex;
-    padding-top: 10px;
-    margin-left: 15px;
+  display: inline-flex;
+  padding-top: 10px;
+  margin-left: 15px;
 }
 
 .patient-name {
-    display: inline-block;
-    height: 50px;
+  display: inline-block;
+  height: 50px;
 }
 
 .img-patient {
-    width: 50px;
+  width: 50px;
 }
 
 .requests-header {
-    background-color:lightblue;
-    text-align: center;
-    font-size: small;
-    height: 60px;
+  background-color: lightblue;
+  text-align: center;
+  font-size: small;
+  height: 60px;
 }
 
 .booking-date {
-    text-align: right;
-    padding-top: 20px;
-    padding-right: 23px;
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 23px;
 }
 
 .remaining-days {
-    text-align: right;
-    padding-right: 43px;
+  text-align: right;
+  padding-right: 43px;
 }
 
 .weight {
-    text-align: right;
-    padding-right: 85px;
+  text-align: right;
+  padding-right: 85px;
 }
 
 .age {
-    text-align: right;
-    padding-right: 32px;
+  text-align: right;
+  padding-right: 32px;
 }
 
 .table-status {
-    text-align: center;
+  text-align: center;
 }
 
 .decision {
-    text-align: center;
+  text-align: center;
 }
 
 .accept {
-    display: inline;
-    border-radius: 5px;
-    background-color: rgb(38, 128, 194);
-    padding: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-    color: white;
-    font-weight: 500;
+  display: inline;
+  border-radius: 5px;
+  background-color: rgb(38, 128, 194);
+  padding: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
+  color: white;
+  font-weight: 500;
+  border: none;
 }
 
 .decline {
-    display: inline;
-    margin-right: 50px;
-    color: red;
-    font-weight: 500;
+  display: inline;
+  margin-right: 50px;
+  color: red;
+  font-weight: 500;
+  border: none;
+  background: none;
 }
-
 .requests-status {
-    background-color: rgb(252, 239, 199);
-    color: rgb(201, 154, 46);
-    font-weight: 500;
-    width: 100px;
-    margin: auto;
-    border-radius: 30px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+  background-color: rgb(252, 239, 199);
+  color: rgb(201, 154, 46);
+  font-weight: 500;
+  width: 100px;
+  margin: auto;
+  border-radius: 30px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .colored {
-    background-color: lightblue;
-}
-
-#confirmed {
-    background-color: lightgreen;
-    color: green;
-    border-radius: 30px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: 500;
-}
-
-#on-call {
-    color: white;
-    background-color: gray;
-    border-radius: 30px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: 500;
-}
-
-#done {     
-    color: green;
-    font-weight: 500;
-}
-
-#name {
-    font-weight: bold;
-}
-
-#date {
-    margin-bottom: -2px;
+  background-color: lightblue;
 }
 
 #patient {
-    width: 230px;
+  width: 230px;
 }
 
 #booking-date {
-    width: 150px;
+  width: 150px;
 }
 
 #remaining-days {
-    width: 200px;
+  width: 200px;
 }
 
 #status {
-    width: 150px;
+  width: 150px;
 }
 
 #patient-id {
-    color: gray;
+  color: gray;
+}
+
+#appointment-modal .modal-dialog {
+  left: 100px;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+  -webkit-animation-name: slideInRight;
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.slideOutRight {
+  animation-name: slideOutRight;
+  -webkit-animation-name: slideOutRight;
+}
+
+#appointment-modal > .modal-backdrop.show {
+  opacity: 0;
 }
