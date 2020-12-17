@@ -114,7 +114,7 @@ module.exports.book_appointment_post = (req,res) => {
 
     try {
         const request = Request.create({doctor_id, user_id, appointment_date, appointment_time, status});
-        res.redirect('/home');
+        res.status(200).json({user: user._id});
     } catch (err) {
        res.status(400);
     }

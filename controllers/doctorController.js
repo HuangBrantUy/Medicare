@@ -1,6 +1,8 @@
-const { response } = require('express');
+const { response, request } = require('express');
 const jwt = require('jsonwebtoken')
 const Doctor = require('../models/Doctor');
+const Patient = require('../models/Patient');
+const Request = require('../models/Request');
 
 //Error handler
 const handleErrors = (err) => {
@@ -87,5 +89,33 @@ module.exports.logout_get = (req, res) => {
 
 
 module.exports.dashboard_get = (req, res) =>{
-    res.render('layouts/dashboard-layout');
+
+    const token = req.cookies.jwt;
+    const decoded = jwt.verify(token, 'valhalla');
+    const docid = decoded.id;
+
+
+    
+    Request.find().sort({ createdAt: -1 })
+        .then((request) => {
+            console.log(docid)
+            console.log(typeof(docid));
+            console.log(request[0].doctor_id);
+            console.log(typeof(request[0].doctor_id));
+            console.log(request[0]);
+            Patient.find()
+                .then((patient)=>{
+                    console.log(typeof(patient[4]._id));
+                    if(request && patient){
+                        res.render('doctor-pages/dashboard-home', { layout: 'layouts/dashboard-layout', requests: request, patients: patient, userid: docid }); 
+                    }
+                })
+                .catch(err =>{
+                    console.log(err);
+                })
+    })
+        .catch(err =>{
+            console.log(err);
+        })
+    
 }

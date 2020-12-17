@@ -67,6 +67,41 @@
                 <th id="status">STATUS</th>
                 <th id="decision"></th>
             </tr>
+
+
+                        <!-- for each statement traversing all the requests -->
+
+                 <% requests.forEach(request=> { %>
+                    <% if (request.doctor_id == userid && !request.status){ %>
+                        <% patients.forEach(patient => { %>
+                            <% if (request.user_id == patient._id){ %>
+                    <tr>
+                        <td >
+                            <div class="picture">
+                                <img class="img-patient" src="images/undraw_profile_1.svg">
+                            </div>
+                            <div class="patient-name">
+                                <%= patient.firstName %> <%= patient.lastName%>
+                                <p id="patient-id">00001</p>
+                            </div>
+                        </td>
+                        <td class="booking-date"><%= request.appointment_date%><p><%= request.appointment_time %></p></td>
+                        <td class="remaining-days">6 days left</td>
+                        <td class="table-status"><div class="requests-status">pending</div></td>
+                        <td class="decision"><div class="choice">
+                                <div class="decline">Decline</div>
+                                <div class="accept">Accept</div>
+                        </div></td>
+                    </tr>
+                            <% } %>
+                        <% }) %>
+                    <% } %>
+                <% }) %>
+
+
+
+
+
             <tr>
                 <td >
                     <div class="picture">

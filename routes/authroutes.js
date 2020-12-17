@@ -10,6 +10,7 @@ router.get('/login', doctorController.login_get);
 router.post('/login', doctorController.login_post);
 router.get('/logout', doctorController.logout_get);
 
+router.get('/', requireDocAuth, doctorController.dashboard_get);
 //new routes
 // router.get('/dashboard', authController.dashboard_get);
 // router.get('/apointments', authController.dashboard_get);
