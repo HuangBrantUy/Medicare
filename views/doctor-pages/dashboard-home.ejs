@@ -30,25 +30,33 @@
                                     </div>
                                     <h6 class="appointment-status" id="status-pending">Pending</h6>
                                 </div>
-                                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal" data-backdrop="false"><img src="/images/right-arrow@20px.svg"></a>
+                                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
                             </div>
 
                             <!-- Modal -->
-                            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
-                                    <div class="modal-content" id="appointment-content">
+                                    <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
+                                            <a type="button" class="close-app-btn" aria-label="Close"><img src="/images/close.svg">
+                                            </a>
                                         </div>
                                         <div class="modal-body">
-                                            ...
+                                            <p class="modal-status" id="status-pending">Pending</p>
+                                            <h3 class="modal-reason">On-off fever for 5 days straight</h3>
+                                            <div class="modal-sched d-flex align-items-center">
+                                                <h4 class="modal-time">9:00 AM</h4>
+                                                <div class="modal-vertical"></div>
+                                                <h4 class="modal-date">November 30, 2020</h4>
+                                            </div>
+                                            <div class="modal-patient">
+                                                <h6 class="booked-by">Booked by</h6>
+                                                <h4 class="modal-name">Brant Uy</h4>
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            <button type="button" id="decline-btn" class="btn btn-secondary">Decline</button>
+                                            <button type="button" id="approve-btn" class="btn btn-primary">Approve</button>
                                         </div>
                                     </div>
                                 </div>
@@ -73,26 +81,34 @@
                                                 </div>
                                                 <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
                                             </div>
-                                            <!-- Modal -->
-                                            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog appointment">
-                                                    <div class="modal-content" id="appointment-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            ...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                            <!-- Modal -->
+                            <div class="modal" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <a type="button" class="close-app-btn" aria-label="Close"><img src="/images/close.svg">
+                                            </a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="modal-status" id="status-pending">Pending</p>
+                                            <h3 class="modal-reason">On-off fever for 5 days straight</h3>
+                                            <div class="modal-sched d-flex align-items-center">
+                                                <h4 class="modal-time">9:00 AM</h4>
+                                                <div class="modal-vertical"></div>
+                                                <h4 class="modal-date">November 30, 2020</h4>
                                             </div>
+                                            <div class="modal-patient">
+                                                <h6 class="booked-by">Booked by</h6>
+                                                <h4 class="modal-name">Brant Uy</h4>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="decline-btn" class="btn btn-secondary">Decline</button>
+                                            <button type="button" id="approve-btn" class="btn btn-primary">Approve</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                             <div class="appointment-col d-flex align-items-center">
                                                 <img class="patient-img" src="/images/undraw_profile_1.svg">
                                                 <div class="col-right">
@@ -109,26 +125,34 @@
                                                 </div>
                                                 <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
                                             </div>
-                                            <!-- Modal -->
-                                            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog appointment">
-                                                    <div class="modal-content" id="appointment-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            ...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                            <!-- Modal -->
+                            <div class="modal" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <a type="button" class="close-app-btn" aria-label="Close"><img src="/images/close.svg">
+                                            </a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="modal-status" id="status-pending">Pending</p>
+                                            <h3 class="modal-reason">On-off fever for 5 days straight</h3>
+                                            <div class="modal-sched d-flex align-items-center">
+                                                <h4 class="modal-time">9:00 AM</h4>
+                                                <div class="modal-vertical"></div>
+                                                <h4 class="modal-date">November 30, 2020</h4>
                                             </div>
+                                            <div class="modal-patient">
+                                                <h6 class="booked-by">Booked by</h6>
+                                                <h4 class="modal-name">Brant Uy</h4>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="decline-btn" class="btn btn-secondary">Decline</button>
+                                            <button type="button" id="approve-btn" class="btn btn-primary">Approve</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                             <div class="appointment-col d-flex align-items-center">
                                                 <img class="patient-img" src="/images/undraw_profile_1.svg">
                                                 <div class="col-right">
@@ -145,26 +169,34 @@
                                                 </div>
                                                 <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
                                             </div>
-                                            <!-- Modal -->
-                                            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog appointment">
-                                                    <div class="modal-content" id="appointment-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            ...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                            <!-- Modal -->
+                            <div class="modal" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <a type="button" class="close-app-btn" aria-label="Close"><img src="/images/close.svg">
+                                            </a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="modal-status" id="status-pending">Pending</p>
+                                            <h3 class="modal-reason">On-off fever for 5 days straight</h3>
+                                            <div class="modal-sched d-flex align-items-center">
+                                                <h4 class="modal-time">9:00 AM</h4>
+                                                <div class="modal-vertical"></div>
+                                                <h4 class="modal-date">November 30, 2020</h4>
                                             </div>
+                                            <div class="modal-patient">
+                                                <h6 class="booked-by">Booked by</h6>
+                                                <h4 class="modal-name">Brant Uy</h4>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="decline-btn" class="btn btn-secondary">Decline</button>
+                                            <button type="button" id="approve-btn" class="btn btn-primary">Approve</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
         </div>
         <h6>View All</h6>
         <h5>Recent Transactions</h5>

@@ -101,141 +101,106 @@
 #status-decline {
   color: #a61b1b;
 }
-/*Pending Requests*/
-table {
-  border-collapse: collapse;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  overflow: hidden;
-  border-style: hidden; /* hide standard table (collapsed) border */
-  box-shadow: 0 0 0 2px rgb(132, 197, 244); /* this draws the table border  */
-  font-size: 15px;
-  table-layout: fixed;
-}
 
-tr {
-  width: 25%;
-}
-
-.pending-requests {
-  width: 1050px;
-}
-
-.requests {
-  width: 1048px;
-}
-
-.picture {
-  display: inline-flex;
-  padding-top: 10px;
-  margin-left: 15px;
-}
-
-.patient-name {
-  display: inline-block;
-  height: 50px;
-}
-
-.img-patient {
-  width: 50px;
-}
-
-.requests-header {
-  background-color: lightblue;
-  text-align: center;
-  font-size: small;
-  height: 60px;
-}
-
-.booking-date {
-  text-align: right;
-  padding-top: 20px;
-  padding-right: 23px;
-}
-
-.remaining-days {
-  text-align: right;
-  padding-right: 43px;
-}
-
-.weight {
-  text-align: right;
-  padding-right: 85px;
-}
-
-.age {
-  text-align: right;
-  padding-right: 32px;
-}
-
-.table-status {
-  text-align: center;
-}
-
-.decision {
-  text-align: center;
-}
-
-.accept {
-  display: inline;
-  border-radius: 5px;
-  background-color: rgb(38, 128, 194);
-  padding: 10px;
-  padding-left: 35px;
-  padding-right: 35px;
-  color: white;
-  font-weight: 500;
-  border: none;
-}
-
-.decline {
-  display: inline;
-  margin-right: 50px;
-  color: red;
-  font-weight: 500;
-  border: none;
-  background: none;
-}
-.requests-status {
-  background-color: rgb(252, 239, 199);
-  color: rgb(201, 154, 46);
-  font-weight: 500;
-  width: 100px;
-  margin: auto;
-  border-radius: 30px;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.colored {
-  background-color: lightblue;
-}
-
-#patient {
-  width: 230px;
-}
-
-#booking-date {
-  width: 150px;
-}
-
-#remaining-days {
-  width: 200px;
-}
-
-#status {
-  width: 150px;
-}
-
-#patient-id {
-  color: gray;
-}
+/*Modal*/
 
 #appointment-modal .modal-dialog {
   position: fixed;
   right: 0;
   margin: 0;
+}
+.close-app-btn {
+  display: contents;
+}
+
+#appointment-modal .modal-content {
+  width: 366px;
+  height: 100vh;
+}
+
+#appointment-modal .modal-body {
+}
+
+.modal-status {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.modal-reason {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  color: #102a43;
+  margin: 0;
+}
+
+.modal-sched {
+}
+
+.modal-time {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  color: #102a43;
+  margin: 0;
+}
+
+.modal-vertical {
+  margin: 0px 8px;
+  border-left: 2px solid #102a43;
+  height: 16px;
+}
+
+.modal-date {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  color: #102a43;
+  margin: 0;
+}
+
+.modal-patient {
+}
+
+.booked-by {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #102a43;
+  margin: 0;
+}
+
+.modal-name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  color: #102a43;
+  margin: 0;
+}
+
+#appointment-modal .modal-footer {
+}
+
+#decline-btn {
+}
+
+#approve-btn {
 }
 
 @keyframes slideInRight {
