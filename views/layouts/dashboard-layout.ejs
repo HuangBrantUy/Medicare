@@ -33,6 +33,23 @@
     <script src="/js/popper.js"></script>
     <script src="/js//bootstrap/bootstrap.js"></script>
     <script src="/js/sb-admin-2.js"></script>
+    <script>
+        $('#appointment-modal').on('shown.bs.modal', function (e) {
+                $('.modal-backdrop').remove();
+            });
+
+              $("#sidebarToggle, #sidebarToggleTop").on('click', function (e) {
+                    if ($(".sidebar").hasClass("toggled")) {
+                        $('.appointment-col').css('width', '886px');
+                    };
+                    // else {
+                    //     $('.appointment-col').css('width', '620px');
+                    // }
+                });
+                // $('.right-icon').on('click', function () {
+                //         $('.modal-backdrop').remove();
+                // });
+    </script>
 </body>
 
 </html>
