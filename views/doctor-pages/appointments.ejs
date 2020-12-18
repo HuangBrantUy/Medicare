@@ -1,75 +1,139 @@
-<div class="main">
-    <div class="appointments-main-header">
-    <h3>All Appointments</h3>
-        <div class="search">
-            <span class="material-icons">search</span>
-            <input type="text" class="search-input" placeholder="Search">
+<div class="dashboard-appointments-wrapper">
+    <div class="container-fluid">
+        <h3>Top-up Appointments</h3>
+        <div class="appointments-container">
+            <div class="appointment-col d-flex align-items-center">
+                <img class="patient-img" src="/images/undraw_profile_1.svg">
+                <div class="col-right">
+                    <p class="appointment-reason">On-off fever for 5 days straight</p>
+                    <h6 class="name-patient">Bruce Alturas</h6>
+                </div>
+                <div class="col-left">
+                    <div class="appointment-sched d-flex align-items-center">
+                        <h6 class="sched-time">9:00 AM</h6>
+                        <div class="vertical"></div>
+                        <h6 class="sched-date">November 30, 2020</h6>
+                    </div>
+                    <h6 class="appointment-status" id="status-accept">Accepted</h6>
+                </div>
+                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
+            </div>
+            <!-- Modal -->
+            <div class="modal" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a type="button" class="close-app-btn" aria-label="Close"><img src="/images/close.svg">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="modal-status" id="status-pending">Pending</h5>
+                            <p class="modal-reason">On-off fever for 5 days straight</p>
+                            <div class="modal-sched d-flex align-items-center">
+                                <h4 class="modal-time">9:00 AM</h4>
+                                <div class="modal-vertical"></div>
+                                <h4 class="modal-date">November 30, 2020</h4>
+                            </div>
+                            <div class="modal-patient">
+                                <h6 class="booked-by">Booked by</h6>
+                                <h4 class="modal-name">Brant Uy</h4>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="decline-btn" class="btn btn-secondary">Decline</button>
+                            <button type="button" id="approve-btn" class="btn btn-primary">Approve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="appointment-col d-flex align-items-center">
+                <img class="patient-img" src="/images/undraw_profile_1.svg">
+                <div class="col-right">
+                    <p class="appointment-reason">Vomiting and experience nausea</p>
+                    <h6 class="name-patient">JB Magsipoc</h6>
+                </div>
+                <div class="col-left">
+                    <div class="appointment-sched d-flex align-items-center">
+                        <h6 class="sched-time">4:30 PM</h6>
+                        <div class="vertical"></div>
+                        <h6 class="sched-date">November 19, 2020</h6>
+                    </div>
+                    <h6 class="appointment-status" id="status-done">Done</h6>
+                </div>
+                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
+            </div>
+            <!-- Modal -->
+            <div class="modal" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a type="button" class="close-app-btn" aria-label="Close"><img src="/images/close.svg">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="modal-status" id="status-pending">Pending</h5>
+                            <p class="modal-reason">On-off fever for 5 days straight</p>
+                            <div class="modal-sched d-flex align-items-center">
+                                <h4 class="modal-time">9:00 AM</h4>
+                                <div class="modal-vertical"></div>
+                                <h4 class="modal-date">November 30, 2020</h4>
+                            </div>
+                            <div class="modal-patient">
+                                <h6 class="booked-by">Booked by</h6>
+                                <h4 class="modal-name">Brant Uy</h4>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="decline-btn" class="btn btn-secondary">Decline</button>
+                            <button type="button" id="approve-btn" class="btn btn-primary">Approve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="appointment-col d-flex align-items-center">
+                <img class="patient-img" src="/images/undraw_profile_1.svg">
+                <div class="col-right">
+                    <p class="appointment-reason">Headache</p>
+                    <h6 class="name-patient">Victor Aguhob</h6>
+                </div>
+                <div class="col-left">
+                    <div class="appointment-sched d-flex align-items-center">
+                        <h6 class="sched-time">1:30 PM</h6>
+                        <div class="vertical"></div>
+                        <h6 class="sched-date">December 8, 2020</h6>
+                    </div>
+                    <h6 class="appointment-status" id="status-decline">Declined</h6>
+                </div>
+                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
+            </div>
+            <!-- Modal -->
+            <div class="modal" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a type="button" class="close-app-btn" aria-label="Close"><img src="/images/close.svg">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="modal-status" id="status-pending">Pending</h5>
+                            <p class="modal-reason">On-off fever for 5 days straight</p>
+                            <div class="modal-sched d-flex align-items-center">
+                                <h4 class="modal-time">9:00 AM</h4>
+                                <div class="modal-vertical"></div>
+                                <h4 class="modal-date">November 30, 2020</h4>
+                            </div>
+                            <div class="modal-patient">
+                                <h6 class="booked-by">Booked by</h6>
+                                <h4 class="modal-name">Brant Uy</h4>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="decline-btn" class="btn btn-secondary">Decline</button>
+                            <button type="button" id="approve-btn" class="btn btn-primary">Approve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <br><br>
-    <div class="pending-requests">
-        <table class="requests">
-            <tr class="requests-header">
-                <th id="patient">PATIENT</th>
-                <th id="booking-date">BOOKING DATE</th>
-                <th id="remaining-days">REMAINING DAYS</th>
-                <th id="status">STATUS</th>
-                <th id="decision"></th>
-            </tr>
-            <tr>
-                <td >
-                    <div class="picture">
-                        <img class="img-patient" src="images/undraw_profile_1.svg">
-                    </div>
-                    <div class="patient-name">
-                        Brant Uy
-                        <p id="patient-id">00003</p>
-                    </div>
-                </td>
-                <td class="booking-date">Nov. 27, 2020 <p>10:30 AM</p></td>
-                <td class="remaining-days">6 days left</td>
-                <td class="table-status"><div id="confirmed" class="appointments-status">confirmed</div></td>
-                <td class="decision"><div class="choice">
-                        <button type="button" class="decline">Cancel</button>
-                        <button type="button"  class="accept">Call</button>
-                </div></td>
-            </tr>
-            <tr class="colored">
-                <td>
-                    <div class="picture">
-                        <img class="img-patient" src="images/undraw_profile_1.svg">
-                    </div>
-                    <div class="patient-name">
-                        Victor Aguhob
-                        <p id="patient-id">00004</p>
-                    </div>
-                </td>
-                <td class="booking-date">Nov. 24, 2020 <p>8:00 AM</p></td>
-                <td class="remaining-days">Today</td>
-                <td class="table-status"><div id="on-call" class="appointments-status">on-call</div></td>
-                <td class="decision"><div class="choice">
-<button type="button" class="decline">Cancel</button>
-<button type="button" class="accept">Call</button>
-                </div></td>
-            </tr>
-            <tr>
-                <td >
-                    <div class="picture">
-                        <img class="img-patient" src="images/undraw_profile_1.svg">
-                    </div>
-                    <div class="patient-name">
-                        Ean Velayo
-                        <p id="patient-id">00005</p>
-                    </div>
-                </td>
-                <td class="booking-date">Nov. 19, 2020 <p>1:00 PM</p></td>
-                <td class="remaining-days">5 days ago</td>
-                <td class="table-status"><div id="done" class="appointments-status">done</div></td>
-                <td class="decision"><div class="choice">
-<button type="button" class="decline">Cancel</button>
-<button type="button" class="accept">Call</button>
-                </div></td>
-            </tr>
-        </table>
     </div>
 </div>

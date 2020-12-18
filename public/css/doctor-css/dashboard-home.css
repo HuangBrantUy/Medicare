@@ -116,91 +116,123 @@
 #appointment-modal .modal-content {
   width: 366px;
   height: 100vh;
+  border: none;
+  border-radius: 0px;
 }
 
 #appointment-modal .modal-body {
+  padding: 36px;
+}
+
+#appointment-modal .modal-header {
+    justify-content: end !important
+  padding: 12px !important;
 }
 
 .modal-status {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  margin: 0;
-  margin-bottom: 6px;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  margin: 0 !important;
+  margin-bottom: 6px !important;
 }
 
 .modal-reason {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 33px;
-  color: #102a43;
-  margin: 0;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  line-height: 33px !important;
+  color: #102a43 !important;
+  margin: 0 !important;
+  margin-bottom: 6px !important;
 }
 
 .modal-sched {
+  margin-bottom: 28px !important;
 }
 
 .modal-time {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 18px !important;
+  line-height: 25px !important;
   /* identical to box height */
 
-  color: #102a43;
+  color: #102a43 !important;
   margin: 0;
 }
 
 .modal-vertical {
-  margin: 0px 8px;
-  border-left: 2px solid #102a43;
-  height: 16px;
+  margin: 0px 8px !important;
+  border-left: 2px solid #102a43 !important;
+  height: 16px !important;
 }
 
 .modal-date {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 18px !important;
+  line-height: 25px !important;
   /* identical to box height */
 
-  color: #102a43;
-  margin: 0;
+  color: #102a43 !important;
+  margin: 0 !important;
 }
 
 .modal-patient {
 }
 
 .booked-by {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 19px;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 19px !important;
 
-  color: #102a43;
-  margin: 0;
+  color: #102a43 !important;
+  margin: 0 !important;
 }
 
 .modal-name {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 18px !important;
+  line-height: 25px !important;
   /* identical to box height */
 
-  color: #102a43;
-  margin: 0;
+  color: #102a43 !important;
+  margin: 0 !important;
 }
 
 #appointment-modal .modal-footer {
+  justify-content: space-between !important;
+  padding: 36px;
 }
 
 #decline-btn {
+  border: none;
+  border-radius: 100px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #a61b1b;
+  background: none;
+  padding: 16px 41px;
 }
 
 #approve-btn {
+  border: none;
+  border-radius: 100px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #079a82;
+  color: white;
+  padding: 16px 37px;
 }
 
 @keyframes slideInRight {
