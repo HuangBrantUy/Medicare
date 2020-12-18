@@ -1,5 +1,4 @@
 .appointment-col {
-  width: 884px;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(127, 163, 202, 0.1);
   border-radius: 8px;
@@ -234,7 +233,9 @@ tr {
 }
 
 #appointment-modal .modal-dialog {
-  left: 100px;
+  position: fixed;
+  right: 0;
+  margin: 0;
 }
 
 @keyframes slideInRight {
@@ -300,7 +301,13 @@ tr {
   animation-name: slideOutRight;
   -webkit-animation-name: slideOutRight;
 }
+#appointment-content {
+  width: 366px;
+  height: 100vh;
+}
 
-#appointment-modal > .modal-backdrop.show {
-  opacity: 0;
+@media (max-width: 1280px) {
+  .appointment-col {
+    width: 620px;
+  }
 }

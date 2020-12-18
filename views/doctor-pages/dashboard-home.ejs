@@ -9,84 +9,166 @@
                 <% if (request.doctor_id==userid && !request.status){ %>
                     <% patients.forEach(patient=> { %>
                         <% if (request.user_id==patient._id){ %>
-            <div class="appointment-col d-flex align-items-center">
-                <img class="patient-img" src="/images/undraw_profile_1.svg">
-                <div class="col-right">
-                    <p class="appointment-reason">Shortness of Breathe</p>
-                    <h6 class="name-patient"><%= patient.firstName %>
-                        <%= patient.lastName%></h6>
-                </div>
-                <div class="col-left">
-                    <div class="appointment-sched d-flex align-items-center">
-                        <h6 class="sched-time"><%= request.appointment_time %></h6>
-                        <div class="vertical"></div>
-                        <h6 class="sched-date"><%= request.appointment_date%></h6>
-                    </div>
-                    <h6 class="appointment-status" id="status-pending">Pending</h6>
-                </div>
-                <type= class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal" data-backdrop="false"><img src="/images/right-arrow@20px.svg"></a>
-            </div>
+                            <div class="appointment-col d-flex align-items-center">
+                                <img class="patient-img" src="/images/undraw_profile_1.svg">
+                                <div class="col-right">
+                                    <p class="appointment-reason">Shortness of Breathe</p>
+                                    <h6 class="name-patient">
+                                        <%= patient.firstName %>
+                                            <%= patient.lastName%>
+                                    </h6>
+                                </div>
+                                <div class="col-left">
+                                    <div class="appointment-sched d-flex align-items-center">
+                                        <h6 class="sched-time">
+                                            <%= request.appointment_time %>
+                                        </h6>
+                                        <div class="vertical"></div>
+                                        <h6 class="sched-date">
+                                            <%= request.appointment_date%>
+                                        </h6>
+                                    </div>
+                                    <h6 class="appointment-status" id="status-pending">Pending</h6>
+                                </div>
+                                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal" data-backdrop="false"><img src="/images/right-arrow@20px.svg"></a>
+                            </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <!-- Modal -->
+                            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content" id="appointment-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                                <% }) %>
                                     <% } %>
                                         <% }) %>
-                                            <% } %>
-                                                <% }) %>
-            <div class="appointment-col d-flex align-items-center">
-                <img class="patient-img" src="/images/undraw_profile_1.svg">
-                <div class="col-right">
-                    <p class="appointment-reason">On-off fever for 5 days straight</p>
-                    <h6 class="name-patient">Bruce Alturas</h6>
-                </div>
-                <div class="col-left">
-                    <div class="appointment-sched d-flex align-items-center">
-                        <h6 class="sched-time">9:00 AM</h6>
-                        <div class="vertical"></div>
-                        <h6 class="sched-date">November 30, 2020</h6>
-                    </div>
-                    <h6 class="appointment-status" id="status-accept">Accepted</h6>
-                </div>
-                                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
-            </div>
-            <!-- Modal -->
-            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                            <div class="appointment-col d-flex align-items-center">
+                                                <img class="patient-img" src="/images/undraw_profile_1.svg">
+                                                <div class="col-right">
+                                                    <p class="appointment-reason">On-off fever for 5 days straight</p>
+                                                    <h6 class="name-patient">Bruce Alturas</h6>
+                                                </div>
+                                                <div class="col-left">
+                                                    <div class="appointment-sched d-flex align-items-center">
+                                                        <h6 class="sched-time">9:00 AM</h6>
+                                                        <div class="vertical"></div>
+                                                        <h6 class="sched-date">November 30, 2020</h6>
+                                                    </div>
+                                                    <h6 class="appointment-status" id="status-accept">Accepted</h6>
+                                                </div>
+                                                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
+                                            </div>
+                                            <!-- Modal -->
+                                            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog appointment">
+                                                    <div class="modal-content" id="appointment-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            ...
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="appointment-col d-flex align-items-center">
+                                                <img class="patient-img" src="/images/undraw_profile_1.svg">
+                                                <div class="col-right">
+                                                    <p class="appointment-reason">Vomiting and experience nausea</p>
+                                                    <h6 class="name-patient">JB Magsipoc</h6>
+                                                </div>
+                                                <div class="col-left">
+                                                    <div class="appointment-sched d-flex align-items-center">
+                                                        <h6 class="sched-time">4:30 PM</h6>
+                                                        <div class="vertical"></div>
+                                                        <h6 class="sched-date">November 19, 2020</h6>
+                                                    </div>
+                                                    <h6 class="appointment-status" id="status-done">Done</h6>
+                                                </div>
+                                                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
+                                            </div>
+                                            <!-- Modal -->
+                                            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog appointment">
+                                                    <div class="modal-content" id="appointment-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            ...
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="appointment-col d-flex align-items-center">
+                                                <img class="patient-img" src="/images/undraw_profile_1.svg">
+                                                <div class="col-right">
+                                                    <p class="appointment-reason">Headache</p>
+                                                    <h6 class="name-patient">Victor Aguhob</h6>
+                                                </div>
+                                                <div class="col-left">
+                                                    <div class="appointment-sched d-flex align-items-center">
+                                                        <h6 class="sched-time">1:30 PM</h6>
+                                                        <div class="vertical"></div>
+                                                        <h6 class="sched-date">December 8, 2020</h6>
+                                                    </div>
+                                                    <h6 class="appointment-status" id="status-decline">Declined</h6>
+                                                </div>
+                                                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
+                                            </div>
+                                            <!-- Modal -->
+                                            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog appointment">
+                                                    <div class="modal-content" id="appointment-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            ...
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+        </div>
+        <h6>View All</h6>
+        <h5>Recent Transactions</h5>
+        <div class="recent-transactions-container">
             <div class="appointment-col d-flex align-items-center">
                 <img class="patient-img" src="/images/undraw_profile_1.svg">
                 <div class="col-right">
@@ -95,88 +177,12 @@
                 </div>
                 <div class="col-left">
                     <div class="appointment-sched d-flex align-items-center">
-                        <h6 class="sched-time">4:30 PM</h6>
-                        <div class="vertical"></div>
-                        <h6 class="sched-date">November 19, 2020</h6>
+                        <h6 class="consultation-fee">P500.00</h6>
                     </div>
-                    <h6 class="appointment-status" id="status-done">Done</h6>
+                    <h6 class="appointment-status" id="status-accept">Payed</h6>
                 </div>
-                                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal" data-backdrop="false"><img src="/images/right-arrow@20px.svg"></a>
+                <a class="right-icon" type="button"><img src="/images/right-arrow@20px.svg"></a>
             </div>
-            <!-- Modal -->
-            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="appointment-col d-flex align-items-center">
-                <img class="patient-img" src="/images/undraw_profile_1.svg">
-                <div class="col-right">
-                    <p class="appointment-reason">Headache</p>
-                    <h6 class="name-patient">Victor Aguhob</h6>
-                </div>
-                <div class="col-left">
-                    <div class="appointment-sched d-flex align-items-center">
-                        <h6 class="sched-time">1:30 PM</h6>
-                        <div class="vertical"></div>
-                        <h6 class="sched-date">December 8, 2020</h6>
-                    </div>
-                    <h6 class="appointment-status" id="status-decline">Declined</h6>
-                </div>
-                                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal" data-backdrop="false"><img src="/images/right-arrow@20px.svg"></a>
-            </div>
-            <!-- Modal -->
-            <div class="modal animated slideInRight" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h6>View All</h6>
-        <h5>Recent Transactions</h5>
-        <div class="recent-transactions-container">
-                        <div class="appointment-col d-flex align-items-center">
-                            <img class="patient-img" src="/images/undraw_profile_1.svg">
-                            <div class="col-right">
-                                <p class="appointment-reason">Vomiting and experience nausea</p>
-                                <h6 class="name-patient">JB Magsipoc</h6>
-                            </div>
-                            <div class="col-left">
-                                <div class="appointment-sched d-flex align-items-center">
-                                    <h6 class="consultation-fee">P500.00</h6>
-                                </div>
-                                <h6 class="appointment-status" id="status-accept">Payed</h6>
-                            </div>
-                            <a class="right-icon" type="button"><img src="/images/right-arrow@20px.svg"></a>
-                        </div>
         </div>
     </div>
 </div>
