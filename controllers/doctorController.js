@@ -98,14 +98,8 @@ module.exports.dashboard_get = (req, res) =>{
     
     Request.find().sort({ createdAt: -1 })
         .then((request) => {
-            console.log(docid)
-            console.log(typeof(docid));
-            console.log(request[0].doctor_id);
-            console.log(typeof(request[0].doctor_id));
-            console.log(request[0]);
             Patient.find()
                 .then((patient)=>{
-                    console.log(typeof(patient[4]._id));
                     if(request && patient){
                         res.render('doctor-pages/dashboard-home', { layout: 'layouts/dashboard-layout', requests: request, patients: patient, userid: docid }); 
                     }
