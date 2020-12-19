@@ -43,6 +43,18 @@
   color: #2680c2 !important;
 }
 
+.booked-activity-set {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: auto;
+  margin-bottom: 28px;
+  padding: 0 20px;
+}
+
+.booked-activity-set::-webkit-scrollbar {
+  display: none;
+}
 .doctor-set {
   display: flex;
   flex-wrap: nowrap;
