@@ -34,21 +34,30 @@
     <script src="/js//bootstrap/bootstrap.js"></script>
     <script src="/js/sb-admin-2.js"></script>
     <script>
-        $('#appointment-modal').on('shown.bs.modal', function (e) {
-                $('.modal-backdrop').remove();
+
+        $('.right-icon').on('click', function () {
+            $("#appointment-modal").removeClass("animated slideOutRight").addClass("animated slideInRight");
             });
 
-              $("#sidebarToggle, #sidebarToggleTop").on('click', function (e) {
-                    if ($(".sidebar").hasClass("toggled")) {
-                        $('.appointment-col').css('width', '886px');
-                    };
-                    // else {
-                    //     $('.appointment-col').css('width', '620px');
-                    // }
-                });
-                // $('.right-icon').on('click', function () {
-                //         $('.modal-backdrop').remove();
-                // });
+        $('#appointment-modal').on('shown.bs.modal', function (e) {
+                $('.modal-backdrop').remove();
+        });
+
+        $('.close-app-btn').on('click', function () {
+            $("#appointment-modal").removeClass("animated slideInRight").addClass("animated slideOutRight");
+        });
+
+                // $('#appointment-modal').on('hidden.bs.modal', function (e) {
+                //         alert('modal is hidden');
+                //     });
+
+        $("#sidebarToggle, #sidebarToggleTop").on('click', function (e) {
+            if ($(".sidebar").hasClass("toggled")) {
+                $('.appointment-col').css('width', '740px');
+            }else {
+                $('.appointment-col').css('width', '620px');
+            };
+        });
     </script>
 </body>
 
