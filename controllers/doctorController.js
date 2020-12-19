@@ -113,3 +113,18 @@ module.exports.dashboard_get = (req, res) =>{
         })
     
 }
+
+
+module.exports.accept_appointment = (req, res) =>{
+
+    const patient_id = req.params.id;
+
+    Request.findByIdAndUpdate(patient_id, {status: 'true'})
+    .then(result => {
+        res.json({ redirect: '/blogs' });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+
+}

@@ -48,7 +48,27 @@ const createToken = (id) => {
 
 // Start of Patient Pages
 module.exports.paient_activity = (req,res) => {
-    res.render('patient-pages/patient-activity',  {layout: 'layouts/patient-layout', title: 'Activity Log'});
+
+    const token = req.cookies.jwt;
+    const decoded = jwt.verify(token, 'valhalla');
+    const user_id = decoded.id;
+
+    Request.find().sort({createdAt: -1})
+        .then((request) =>{
+            Doctor.find()
+                .then((doctor) => {
+                    if (request && doctor){
+                        res.render('patient-pages/patient-activity',  {layout: 'layouts/patient-layout', title: 'Activity Log', requests: request, doctors: doctor, user_id: user_id});
+                    }
+                })
+                .catch(err =>{
+                    console.log(err)
+                })
+        })
+        .catch(err =>{
+            console.log(err);
+        })
+    
 }
 
 module.exports.patient_account = (req,res) => {
@@ -118,7 +138,7 @@ module.exports.book_appointment_post = (req,res) => {
     } catch (err) {
        res.status(400);
     }
-    console.log(res);
+ 
 }
 //End of Patient Pages
 

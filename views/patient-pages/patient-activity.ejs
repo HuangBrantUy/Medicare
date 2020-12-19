@@ -23,7 +23,7 @@
         <% requests.forEach(request=> { %>
             <% if (request.user_id==user_id && !request.status){ %>
                 <% doctors.forEach(doctor=> { %>
-                    <% if (request.user_id==doctor._id){ %>
+                    <% if (request.doctor_id==doctor._id){ %>
                         <div class="tab-pane fade show active" id="pending-tab" role="tabpanel" aria-labelledby="pills-home-tab">
                             <div class="booked-activity">
                                 <a class="booked-link d-flex justify-content-center" href="/">
@@ -36,13 +36,13 @@
                                             <div class="booked-doctor">
                                                 <div class="d-flex align-items-center">
                                                     <i class="fas fa-user-md"></i>
-                                                    <h6 class="doc-name">Dr. Eduardo Stan</h6>
+                                                    <h6 class="doc-name">Dr. <%= doctor.firstName%> <%= doctor.lastName %></h6>
                                                 </div>
                                                 <span class="booked-specialization">Psychiatrist</span>
                                             </div>
                                             <div class="booked-sched d-flex align-items-center">
                                                 <i class="fas fa-calendar-day"></i>
-                                                <h6 class="date-time">8:00 AM, November 6</h6>
+                                                <h6 class="date-time"><%= request.appointment_time%>, <%= request.appointment_date%></h6>
                                             </div>
                                         </div>
                                     </div>
