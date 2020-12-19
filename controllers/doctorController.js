@@ -119,9 +119,11 @@ module.exports.accept_appointment = (req, res) =>{
 
     const patient_id = req.params.id;
 
-    Request.findByIdAndUpdate(patient_id, {status: 'true'})
+    Request.findOneAndUpdate({user_id: patient_id}, {status: 'true'})
     .then(result => {
-        res.json({ redirect: '/blogs' });
+        if(result){
+            res.redirect('/');
+        }
       })
       .catch(err => {
         console.log(err);

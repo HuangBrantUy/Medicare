@@ -17,6 +17,9 @@ router.get('/', requireDocAuth, doctorController.dashboard_get);
 // router.get('/patients', authController.dashboard_get);
 // router.get('/requests', authController.dashboard_get);
 
+//Doctor Routes
+router.get('/approve_patient/:id', requireDocAuth, doctorController.accept_appointment);
+
 
 
 //Patient routes
@@ -32,5 +35,6 @@ router.get('/view-all-doctors', requireDocAuth, authController.view_all_doctors)
 router.get('/patient-activity', requireDocAuth, authController.paient_activity);
 router.get('/patient-account', requireDocAuth, authController.patient_account);
 router.post('/book-appointment', requireDocAuth, authController.book_appointment_post);
+
 
 module.exports = router;

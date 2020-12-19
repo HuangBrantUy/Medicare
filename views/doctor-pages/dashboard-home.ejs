@@ -6,7 +6,7 @@
             <!-- for each statement traversing all the requests -->
 
             <% requests.forEach(request=> { %>
-                <% if (request.doctor_id==userid && !request.status){ %>
+                <% if (request.doctor_id==userid && !request.status ){ %>
                     <% patients.forEach(patient=> { %>
                         <% if (request.user_id==patient._id){ %>
                             <div class="appointment-col d-flex align-items-center">
@@ -28,7 +28,11 @@
                                             <%= request.appointment_date%>
                                         </h6>
                                     </div>
+                                    <% if (!request.status) { %>
                                     <h6 class="appointment-status" id="status-pending">Pending</h6>
+                                    <% } else { %>
+                                <h6 class="appointment-status" id="status-accept">Accepted</h6>
+                                    <%}%>
                                 </div>
                                 <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
                             </div>
@@ -42,21 +46,27 @@
                                             </a>
                                         </div>
                                         <div class="modal-body">
+
+                                            <% if (!request.status) { %>
                                             <h5 class="modal-status" id="status-pending">Pending</h5>
+                                                <% } else { %>
+                                                    <h5 class="modal-status" id="status-accept">Accepted</h5>
+                                                <%}%> 
+
                                             <p class="modal-reason">On-off fever for 5 days straight</p>
                                             <div class="modal-sched d-flex align-items-center">
-                                                <h4 class="modal-time">9:00 AM</h4>
+                                                <h4 class="modal-time"><%= request.appointment_time%></h4>
                                                 <div class="modal-vertical"></div>
-                                                <h4 class="modal-date">November 30, 2020</h4>
+                                                <h4 class="modal-date"><%= request.appointment_date%></h4>
                                             </div>
                                             <div class="modal-patient">
                                                 <h6 class="booked-by">Booked by</h6>
-                                                <h4 class="modal-name">Brant Uy</h4>
+                                                <h4 class="modal-name"><%= patient.firstName %> <%= patient.lastName%></h4>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" id="decline-btn" class="btn btn-secondary">Decline</button>
-                                            <button type="button" id="approve-btn" class="btn btn-primary">Approve</button>
+                                            <button type="button" id="approve-btn" class="btn btn-primary"><a href='/approve_patient/<%= patient._id %>'>Appssrove</a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -65,6 +75,7 @@
                                 <% }) %>
                                     <% } %>
                                         <% }) %>
+                                        <!-- end of foreach loop -->
                                             <div class="appointment-col d-flex align-items-center">
                                                 <img class="patient-img" src="/images/undraw_profile_1.svg">
                                                 <div class="col-right">
