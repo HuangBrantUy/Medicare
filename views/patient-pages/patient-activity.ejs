@@ -26,7 +26,7 @@
                     <% if (request.doctor_id==doctor._id){ %>
                         <div class="tab-pane fade show active" id="pending-tab" role="tabpanel" aria-labelledby="pills-home-tab">
                             <div class="booked-activity">
-                                <a class="booked-link d-flex justify-content-center" href="/">
+                                <a class="booked-link d-flex justify-content-center" href="/view-doctor/<%= doctor._id %>">
                                     <div class="booked-card">
                                         <div class="booked-header d-flex align-items-center">
                                             <h5 class="booked-id">Booking ID #1031</h5>
@@ -54,34 +54,6 @@
             <% } %>
         <% }) %>
 
-
-
-
-        <div class="tab-pane fade show active" id="pending-tab" role="tabpanel" aria-labelledby="pills-home-tab">
-            <div class="booked-activity">
-                <a class="booked-link d-flex justify-content-center" href="/">
-                    <div class="booked-card">
-                        <div class="booked-header d-flex align-items-center">
-                            <h5 class="booked-id">Booking ID #1031</h5>
-                            <img src="/images/right-arrow@20px.svg">
-                        </div>
-                        <div class="booked-body">
-                            <div class="booked-doctor">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-user-md"></i>
-                                    <h6 class="doc-name">Dr. Eduardo Stan</h6>
-                                </div>
-                                <span class="booked-specialization">Psychiatrist</span>
-                            </div>
-                            <div class="booked-sched d-flex align-items-center">
-                                <i class="fas fa-calendar-day"></i>
-                                <h6 class="date-time">8:00 AM, November 6</h6>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
         
         <div class="tab-pane fade" id="confirmed-tab" role="tabpanel" aria-labelledby="pills-contact-tab">
             <% requests.forEach(request=> { %>
@@ -90,7 +62,7 @@
                         <% if (request.doctor_id==doctor._id){ %>
                             <div class="tab-pane fade show active" id="pending-tab" role="tabpanel" aria-labelledby="pills-home-tab">
                                 <div class="booked-activity">
-                                    <a class="booked-link d-flex justify-content-center" href="/">
+                                    <a class="booked-link d-flex justify-content-center" href="/view-doctor/<%= doctor._id %>">
                                         <div class="booked-card">
                                             <div class="booked-header d-flex align-items-center">
                                                 <h5 class="booked-id">Booking ID #1031</h5>

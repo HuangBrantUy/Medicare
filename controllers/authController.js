@@ -89,12 +89,19 @@ module.exports.patient_account = (req,res) => {
 module.exports.doctor_details = (req, res) => {
     const id = req.params.id;
     Doctor.findById(id)
-     .then((result)=>{
-         res.render('patient-pages/view-doctor', {layout: 'layouts/patient-layout', doctor:result, title: 'View Doctor'})
-     })
-     .catch(err =>{
+        .then((result)=>{
+            Request.find()
+                .then((requests) => {
+                    res.render('patient-pages/view-doctor', {layout: 'layouts/patient-layout', doctor:result, title: 'View Doctor', requests: requests});
+                })
+                .catch((err)=>{
+                    console.log(err);
+                })
+         
+         })
+        .catch(err =>{
          console.log(err);
-     })
+         })
 }
 
 
@@ -110,13 +117,29 @@ module.exports.view_all_doctors = (req, res) =>{
 
 
 module.exports.patient_index = (req, res) => {
+    //Pass the user id
+    const token = req.cookies.jwt;
+    const decoded = jwt.verify(token, 'valhalla');
+    const user_id = decoded.id;
+
+    //pass the doctors object
     Doctor.find().sort({ createdAt: -1 })
-        .then((result) => {
-            res.render('patient-pages/patient-home',  { layout: 'layouts/patient-layout', doctors: result, title: 'Home | Medicare' })
+        .then((doctors) => {
+
+            //pass the requests object
+            Request.find()
+                .then((requests) =>{
+                    res.render('patient-pages/patient-home',  { layout: 'layouts/patient-layout', title: 'Home | Medicare' ,doctors: doctors, requests: requests, user_id: user_id});
+                })
+                .catch(err => {
+                    console.log(err);
+                })
         })
         .catch(err => {
             console.log(err);
-          });
+        });
+
+
 }
 
 
