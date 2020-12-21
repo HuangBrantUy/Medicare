@@ -178,3 +178,29 @@ module.exports.patients_get = (req,res) => {
                     console.log(err);
                 })
 }
+
+module.exports.notifications_get = (req,res) => {
+
+
+    const token = req.cookies.jwt;
+    const decoded = jwt.verify(token, 'valhalla');
+    const docid = decoded.id;
+
+        Request.find().sort({ createdAt: -1 })
+                .then((request) => {
+                    Patient.find()
+                        .then((patient)=>{
+                            if(request && patient){
+                                res.render('doctor-pages/notifications', { layout: 'layouts/dashboard-layout', requests: request, patients: patient, userid: docid });
+                            }
+                        })
+                        .catch(err =>{
+                            console.log(err);
+                        })
+            })
+                .catch(err =>{
+                    console.log(err);
+                })
+
+
+}

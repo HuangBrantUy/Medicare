@@ -14,13 +14,23 @@
 
 .col-right {
   margin-left: 16px;
-  margin-right: auto;
+  margin-right: 100px;
 }
 
 .col-left {
-  margin-right: 12px;
+  /* margin-right: 12px; */
 }
+
 .appointment-reason {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+}
+
+.notification-label {
   margin: 0;
   font-style: normal;
   font-weight: 600;

@@ -1,0 +1,29 @@
+<div class="dashboard-notification-wrapper">
+        <div class="container-fluid">
+            <h3>Notifications</h3>
+            <div class="notification-container">
+            <% requests.forEach(request=> { %>
+                <% if (request.doctor_id==userid){ %>
+                    <% patients.forEach(patient=> { %>
+                        <% if (request.user_id==patient._id){ %>
+                                <div class="appointment-col d-flex align-items-center">
+                                    <img class="patient-img" src="/images/undraw_profile_1.svg">
+                                    <div class="col-right">
+                                        <h6 class="patient-patient">
+                                            <%= patient.firstName %>
+                                                <%=patient.lastName %>
+                                        </h6>
+                                    </div>
+                                    <div class="col-left">
+                                        <p class="notification-label">
+                                            You have a request.
+                                        </p>
+                                    </div>
+                                </div>
+                            <% } %>
+                                <% }) %>
+                                    <% } %>
+                                        <% }) %>
+            </div>
+        </div>
+</div>

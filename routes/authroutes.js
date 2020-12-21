@@ -21,6 +21,7 @@ router.get('/', requireDocAuth, doctorController.dashboard_get);
 router.get('/approve_patient/:id', requireDocAuth, doctorController.accept_appointment);
 router.get('/appointments', requireDocAuth, doctorController.appointments_get);
 router.get('/patients', requireDocAuth, doctorController.patients_get);
+router.get('/notifications', requireDocAuth, doctorController.notifications_get);
 
 
 
