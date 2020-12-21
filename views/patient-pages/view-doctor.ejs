@@ -67,14 +67,26 @@
         </div>
                 <!-- START OF FOR EACH LOOP TO CHECK IF REQUEST EXISTS AND IF IT HAS BEEN ACCEPTED OR NOT  -->
 
-                        <button type="button" id="book-appointment-btn" class="btn btn-primary" data-toggle="modal" data-target="#book-appointment">
-                            Book Appointment
-                        </button>
 
 
-                        <button type="button"  id="come-in-btn" class="btn btn-primary" style="display: none;">
-                            Come In
-                        </button>
+                        <% if(requests.length > 0 ){ %>
+                            <% requests.forEach(request => { %>
+                                <% if(request.doctor_id == doctor._id ){ %>
+                                    <% if(request.status){ %>
+        
+                                        <button type="button"  id="come-in-btn" class="btn btn-primary" >
+                                            Come In
+                                        </button>
+        
+                                    <%} else { %>
+                                        <button type="button" id="book-appointment-btn" class="btn btn-primary" data-toggle="modal" data-target="#book-appointment">
+                                            Book Appointment
+                                        </button>
+                                    <% } %>
+                                <% } %>
+                            <% }) %>
+                        <% } %>
+
      
                 <!-- END OF FOR EACH LOOP TO CHECK IF REQUEST EXISTS AND IF IT HAS BEEN ACCEPTED OR NOT  -->
 
@@ -111,6 +123,9 @@
                         <!-- <div class="modal-footer d-flex justify-content-center">
                         <button type="submit" id="book-now-btn" class="btn btn-primary">Book Now</button>
                     </div> -->
+                    <button type="button" id="come-in-btn" class="btn btn-primary">
+                        Come In
+                    </button>
                     </form>
                 </div>
         </div>
