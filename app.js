@@ -39,7 +39,7 @@ app.get('/view-doctor-confirmed', requireDocAuth, (req, res) => res.render ('pat
 
 // doctor routes
 
-app.get('/appointments', requireDocAuth, (req,res)=> res.render('doctor-pages/appointments', { layout: 'layouts/dashboard-layout'}));
+
 app.get('/patients', requireDocAuth, (req,res)=> res.render('doctor-pages/patients', { layout: 'layouts/dashboard-layout'}));
 
 

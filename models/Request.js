@@ -18,6 +18,9 @@ const patientSchema = new mongoose.Schema({
     },
     status: {
         type: Boolean,
+    },
+    reason: {
+        type: String
     }
 });
 

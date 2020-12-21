@@ -130,3 +130,29 @@ module.exports.accept_appointment = (req, res) =>{
       });
 
 }
+
+module.exports.appointments_get = (req,res) => {
+
+
+    const token = req.cookies.jwt;
+    const decoded = jwt.verify(token, 'valhalla');
+    const docid = decoded.id;
+
+        Request.find().sort({ createdAt: -1 })
+                .then((request) => {
+                    Patient.find()
+                        .then((patient)=>{
+                            if(request && patient){
+                                res.render('doctor-pages/appointments', { layout: 'layouts/dashboard-layout', requests: request, patients: patient, userid: docid }); 
+                            }
+                        })
+                        .catch(err =>{
+                            console.log(err);
+                        })
+            })
+                .catch(err =>{
+                    console.log(err);
+                })
+
+
+}

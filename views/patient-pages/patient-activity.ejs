@@ -23,7 +23,7 @@
         <% requests.forEach(request=> { %>
             <% if (request.user_id==user_id && !request.status){ %>
                 <% doctors.forEach(doctor=> { %>
-                    <% if (request.doctor_id==doctor._id){ %>
+                    <% if (request.doctor_id == doctor._id){ %>
                         <div class="tab-pane fade show active" id="pending-tab" role="tabpanel" aria-labelledby="pills-home-tab">
                             <div class="booked-activity">
                                 <a class="booked-link d-flex justify-content-center" href="/view-doctor/<%= doctor._id %>">

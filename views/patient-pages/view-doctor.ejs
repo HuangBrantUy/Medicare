@@ -105,7 +105,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Cause/Symptom</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="reason"></textarea>
                         </div>
                         <button type="submit" id="book-now-btn" class="btn btn-primary">Book Now</button>
                         <!-- <div class="modal-footer d-flex justify-content-center">
@@ -128,11 +128,12 @@
         const doctor_id = '<%= doctor._id%>';
         const appointment_date = form.appointment_date.value;
         const appointment_time = form.appointment_time.value;
+        const reason = form.reason.value;
 
         try {
             const res = await fetch('/book-appointment', {
                 method: 'POST',
-                body: JSON.stringify({doctor_id, appointment_date, appointment_time }),
+                body: JSON.stringify({doctor_id, appointment_date, appointment_time, reason }),
                 headers: { 'Content-Type': 'application/JSON' }
             });
             const data = await res.json();

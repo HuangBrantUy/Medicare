@@ -2,6 +2,62 @@
     <div class="container-fluid">
         <h3>Top-up Appointments</h3>
         <div class="appointments-container">
+
+            <% requests.forEach(request=> { %>
+                <% if (request.doctor_id==userid && request.status ){ %>
+                    <% patients.forEach(patient=> { %>
+                        <% if (request.user_id==patient._id){ %>
+
+            <div class="appointment-col d-flex align-items-center">
+                <img class="patient-img" src="/images/undraw_profile_1.svg">
+                <div class="col-right">
+                    <p class="appointment-reason"><%= request.reason %></p>
+                    <h6 class="name-patient"><%= patient.firstName %> <%=patient.lastName %></h6>
+                </div>
+                <div class="col-left">
+                    <div class="appointment-sched d-flex align-items-center">
+                        <h6 class="sched-time"><%= request.appointment_time%></h6>
+                        <div class="vertical"></div>
+                        <h6 class="sched-date"><%= request.appointment_date%></h6>
+                    </div>
+                    <h6 class="appointment-status" id="status-accept">Accepted</h6>
+                </div>
+                <a class="right-icon" type="button" data-toggle="modal" data-target="#appointment-modal"><img src="/images/right-arrow@20px.svg"></a>
+            </div>
+            <!-- Modal -->
+            <div class="modal" id="appointment-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a type="button" class="close-app-btn" aria-label="Close"><img src="/images/close.svg">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="modal-status" id="status-accept">Accepted</h5>
+                            <p class="modal-reason"><%= request.reason %></p>
+                            <div class="modal-sched d-flex align-items-center">
+                                <h4 class="modal-time"><%= request.appointment_time%></h4>
+                                <div class="modal-vertical"></div>
+                                <h4 class="modal-date"><%= request.appointment_date%></h4>
+                            </div>
+                            <div class="modal-patient">
+                                <h6 class="booked-by">Booked by</h6>
+                                <h4 class="modal-name"><%= patient.firstName %> <%=patient.lastName %></h4>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="decline-btn" class="btn btn-secondary">Cancel</button>
+                            <button type="button" id="approve-btn" class="btn btn-primary">Join room</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+            <% }) %>
+                <% } %>
+                    <% }) %>
+
+
             <div class="appointment-col d-flex align-items-center">
                 <img class="patient-img" src="/images/undraw_profile_1.svg">
                 <div class="col-right">

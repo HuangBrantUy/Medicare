@@ -144,7 +144,7 @@ module.exports.patient_index = (req, res) => {
 
 
 module.exports.book_appointment_post = (req,res) => {
-    const {doctor_id, appointment_date, appointment_time} = req.body
+    const {doctor_id, appointment_date, appointment_time, reason} = req.body
 
 
 //decode token to get user id
@@ -156,7 +156,7 @@ module.exports.book_appointment_post = (req,res) => {
     const status = false;
 
     try {
-        const request = Request.create({doctor_id, user_id, appointment_date, appointment_time, status});
+        const request = Request.create({doctor_id, user_id, appointment_date, appointment_time, status, reason});
         res.status(200).json({user: user._id});
     } catch (err) {
        res.status(400);
