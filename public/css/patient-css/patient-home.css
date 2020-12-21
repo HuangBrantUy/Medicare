@@ -4,7 +4,7 @@
   top: 76px;
   height: auto;
   overflow-y: auto;
-  margin-bottom: 106px;
+  padding-bottom: 106px;
 }
 
 .home-wrapper::-webkit-scrollbar {
