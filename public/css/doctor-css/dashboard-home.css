@@ -243,6 +243,15 @@
   padding: 16px 37px;
 }
 
+#approve-btn a{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    text-decoration: none!important;
+}
+
 @keyframes slideInRight {
   from {
     transform: translate3d(100%, 0, 0);
