@@ -72,6 +72,14 @@
   color: #627d98;
 }
 
+.patient-patient {
+   margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #102a43;
+}
 .right-icon {
   display: contents;
 }

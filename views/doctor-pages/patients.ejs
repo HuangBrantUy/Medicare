@@ -1,111 +1,25 @@
-<div class="main">
-    <div class="appointments-main-header">
-    <h3>All Appointments</h3>
-        <div class="search">
-            <span class="material-icons">search</span>
-            <input type="text" class="search-input" placeholder="Search">
+<div class="dashboard-appointments-wrapper">
+    <div class="container-fluid">
+        <h3>My Patients</h3>
+        <div class="patient-container">
+            <% requests.forEach(request=> { %>
+                <% if (request.doctor_id==userid && request.status ){ %>
+                    <% patients.forEach(patient=> { %>
+                        <% if (request.user_id==patient._id){ %>
+                            <div class="appointment-col d-flex align-items-center">
+                                <img class="patient-img" src="/images/undraw_profile_1.svg">
+                                <div class="col-right">
+                                    <h6 class="patient-patient">
+                                        <%= patient.firstName %>
+                                            <%=patient.lastName %>
+                                    </h6>
+                                </div>
+                                <a class="right-icon" type="button"><img src="/images/right-arrow@20px.svg"></a>
+                            </div>
+                            <% } %>
+                                <% }) %>
+                                    <% } %>
+                                        <% }) %>
         </div>
-    </div>
-    <br><br>
-    <div class="pending-requests">
-        <table class="requests">
-            <tr class="requests-header">
-                <th id="patient">PATIENT</th>
-                <th id="booking-date">AGE</th>
-                <th id="remaining-days">WEIGHT</th>
-                <th id="status">HEIGHT</th>
-                <th id="decision"></th>
-            </tr>
-            <tr>
-                <td >
-                    <div class="picture">
-                        <img class="img-patient" src="images/undraw_profile_1.svg">
-                    </div>
-                    <div class="patient-name">
-                        Bruce Alturas
-                        <p id="patient-id">00001</p>
-                    </div>
-                </td>
-                <td class="age">21 years old</td>
-                <td class="weight">75 kg</td>
-                <td class="table-status">172.72 cm</td>
-                <td class="decision"><div class="choice">
-                        <button type="button" class="decline">Delete</button>
-                        <button type="button" class="accept">View</button>
-                </div></td>
-            </tr>
-            <tr class="colored">
-                <td>
-                    <div class="picture">
-                        <img class="img-patient" src="images/undraw_profile_1.svg">
-                    </div>
-                    <div class="patient-name">
-                        JB Magsipoc
-                        <p id="patient-id">00002</p>
-                    </div>
-                </td>
-                <td class="age">20 years old</td>
-                <td class="weight">65 kg</td>
-                <td class="table-status">165.09 cm</td>
-                <td class="decision"><div class="choice">
-                        <button type="button" class="decline">Delete</button>
-                        <button type="button" class="accept">View</button>
-                </div></td>
-            </tr>
-            <tr>
-                <td >
-                    <div class="picture">
-                        <img class="img-patient" src="images/undraw_profile_1.svg">
-                    </div>
-                    <div class="patient-name">
-                        Ean Velayo
-                        <p id="patient-id">00005</p>
-                    </div>
-                </td>
-                <td class="age">20 years old</td>
-                <td class="weight">66 kg</td>
-                <td class="table-status">165.09 cm</td>
-                <td class="decision"><div class="choice">
-                        <button type="button" class="decline">Delete</button>
-                        <button type="button" class="accept">View</button>
-                </div></td>
-            </tr>
-            <tr class="colored">
-                <td>
-                    <div class="picture">
-                        <img class="img-patient" src="images/undraw_profile_1.svg">
-                    </div>
-                    <div class="patient-name">
-                        Victor Aguhob
-                        <p id="patient-id">00004</p>
-                    </div>
-                </td>
-                <td class="age">21 years old</td>
-                <td class="weight">65 kg</td>
-                <td class="table-status">162.56 cm</td>
-                <td class="decision"><div class="choice">
-                        <button type="button" class="decline">Delete</button>
-                        <button type="button" class="accept">View</button>
-                </div></td>
-            </tr>
-            <tr>
-                <td >
-                    <div class="picture">
-                        <img class="img-patient" src="images/undraw_profile_1.svg">
-                    </div>
-                    <div class="patient-name">
-                        Ean Velayo
-                        <p id="patient-id">00005</p>
-                    </div>
-                </td>
-                <td class="age">28 years old</td>
-                <td class="weight">72 kg</td>
-                <td class="table-status">167.64 cm</td>
-                <td class="decision"><div class="choice">
-                        <button type="button" class="decline">Delete</button>
-                        <button type="button" class="accept">View</button>
-                </div></td>
-            </tr>
-        </table>
     </div>
 </div>
